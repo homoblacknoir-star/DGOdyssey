@@ -1,0 +1,10 @@
+~ start
+Alex: [speed=0.2][[โอย. . .|อูยย. . .|อาา. . .]]
+Alex: [speed=0.2]ง่วงจัง. . .
+- ลุกจากที่นั่ง
+	คุณเลือกที่จะลุกออกจากที่นั่ง
+- นั่งทำงานต่อ
+	 คุณเลือกที่จะนั่งทำงานต่อ
+- Start again => start 
+Nathan: For more information see the online documentation.
+=> END

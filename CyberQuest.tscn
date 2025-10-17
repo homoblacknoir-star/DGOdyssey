@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://deq77ycki327l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js53s"]
+region = Rect2(0, 0, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n507"]
+region = Rect2(512, 0, 512, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrlms"]
+region = Rect2(1024, 0, 512, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5fkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js53s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n507")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrlms")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tey8r"]
+radius = 28.0
+height = 90.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(139, 511)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(4, -2.24998)
+scale = Vector2(0.151855, 0.10791)
+sprite_frames = SubResource("SpriteFrames_o5fkk")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_tey8r")
