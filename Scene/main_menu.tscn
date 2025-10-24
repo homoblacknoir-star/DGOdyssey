@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://c7bjmwdyq43oo" path="res://Font/BoldPixels.otf" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://dp3kijp0ry2jg" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://cn25e8xjqq8sp" path="res://Background/7.png" id="2_hii65"]
+[ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="2_hii65"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqsxi"]
 texture = ExtResource("2_hii65")

@@ -24,9 +24,9 @@ func _physics_process(delta: float) -> void:
 			sprite_2d.play("default_right")
 		elif direction > 0 :
 			# ถ้าขยับ ให้เล่นท่า "running"
-			sprite_2d.play("walk")
+			sprite_2d.play("running")
 		else:
-			sprite_2d.play("walk")
+			sprite_2d.play("running")
 	else:
 		# ถ้าลอยอยู่ ให้เล่นท่า "jumping"
 		sprite_2d.play("jumping")

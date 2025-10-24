@@ -121,7 +121,7 @@ texture = ExtResource("15_jy5o4")
 
 [node name="8" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(506, 582.00006)
+position = Vector2(471, 579)
 scale = Vector2(4, 5.746)
 texture = ExtResource("16_ggit0")
 
