@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwwrlp4wrpyd2"]
+
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_m2qs7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihpwr"]
+size = Vector2(20, 24.599998)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sdrmg"]
+font = ExtResource("2_m2qs7")
+font_size = 30
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractionManager" type="Node2D"]
+
+[node name="interactRange" type="Area2D" parent="."]
+z_index = 10
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactRange"]
+position = Vector2(0, 11.499998)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_ihpwr")
+
+[node name="interactlabel" type="Label" parent="."]
+z_index = 10
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -30.0
+offset_right = 111.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[ E ] เพื่อใช้งาน"
+label_settings = SubResource("LabelSettings_sdrmg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="interactRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="interactRange" to="." method="_on_interact_range_area_exited"]
