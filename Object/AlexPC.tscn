@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://coiscuxpjowh6"]
+[gd_scene load_steps=5 format=3 uid="uid://coiscuxpjowh6"]
 
 [ext_resource type="Script" uid="uid://cm8e4k1n7rx5" path="res://Object/alex_pc.gd" id="1_dwthk"]
 [ext_resource type="Texture2D" uid="uid://dqq3dix7bibnf" path="res://Tileset/15.png" id="2_lrgyp"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_lrgyp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_al8ia"]
 
@@ -16,8 +17,16 @@ texture = ExtResource("2_lrgyp")
 shape = SubResource("CircleShape2D_al8ia")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+texture_filter = 1
+offset_left = 18.0
+offset_top = -29.0
+offset_right = 111.0
+offset_bottom = -6.0
+theme_override_fonts/font = ExtResource("3_lrgyp")
+theme_override_font_sizes/font_size = 10
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
