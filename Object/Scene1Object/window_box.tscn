@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://coiscuxpjowh6"]
+[gd_scene load_steps=6 format=3 uid="uid://b3gj1fa7q6wc3"]
 
-[ext_resource type="Script" uid="uid://cm8e4k1n7rx5" path="res://Object/alex_pc.gd" id="1_dwthk"]
-[ext_resource type="Texture2D" uid="uid://cde07a7rxne4o" path="res://Tileset/15.png" id="2_lrgyp"]
-[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_al8ia"]
+[ext_resource type="Script" uid="uid://cr03p773kpo5a" path="res://Object/window_box.gd" id="1_6cxmc"]
+[ext_resource type="Texture2D" uid="uid://crume2ku4qd37" path="res://Tileset/Box6.png" id="2_k8njr"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_ajjpm"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_al8ia"]
-radius = 7.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_up1m7"]
+radius = 20.396078
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al8ia"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvtkx"]
 bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
 border_width_left = 1
 border_width_top = 1
@@ -16,29 +16,31 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 anti_aliasing_size = 10.0
 
-[node name="AlexPC" type="Area2D"]
-script = ExtResource("1_dwthk")
+[node name="WindowBox" type="Area2D"]
+script = ExtResource("1_6cxmc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.7204674, 0.7204675, 0.7204674, 1)
 texture_filter = 1
-texture = ExtResource("2_lrgyp")
+texture = ExtResource("2_k8njr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_al8ia")
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_up1m7")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = -46.0
-offset_top = -33.0
-offset_right = 47.0
-offset_bottom = -18.0
+offset_left = -59.0
+offset_top = -75.0
+offset_right = 34.0
+offset_bottom = -60.0
 size_flags_stretch_ratio = 0.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
-theme_override_fonts/font = ExtResource("3_al8ia")
+theme_override_fonts/font = ExtResource("3_ajjpm")
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_al8ia")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvtkx")
 text = "[ E ] Interact"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,23 +1,21 @@
-[gd_scene load_steps=19 format=3 uid="uid://drcdcfy74qi2u"]
+[gd_scene load_steps=17 format=3 uid="uid://drcdcfy74qi2u"]
 
-[ext_resource type="Texture2D" uid="uid://ohpy7v4vndl1" path="res://Tileset/128x64.png" id="1_53wku"]
-[ext_resource type="Texture2D" uid="uid://db3x8la7r0jyv" path="res://Tileset/Robotad.png" id="2_1qh2w"]
-[ext_resource type="Texture2D" uid="uid://mtxatngq8spb" path="res://Tileset/Box4.png" id="3_7n4pj"]
-[ext_resource type="Texture2D" uid="uid://b5215nfjyolr7" path="res://Tileset/Bucket.png" id="4_fawxf"]
-[ext_resource type="Texture2D" uid="uid://bni3aj8wsao5u" path="res://Tileset/Box3.png" id="5_chhqo"]
-[ext_resource type="Texture2D" uid="uid://bpams5ir6sgaf" path="res://Tileset/Box5.png" id="6_kt2wd"]
-[ext_resource type="Texture2D" uid="uid://bckxop3hlnp4i" path="res://Tileset/Board2.png" id="7_ha425"]
-[ext_resource type="Texture2D" uid="uid://bawdfwqbc60g8" path="res://Tileset/building_01.png" id="8_ahdok"]
-[ext_resource type="Texture2D" uid="uid://ffonoam12heg" path="res://Tileset/building_05.png" id="9_48ke7"]
-[ext_resource type="Texture2D" uid="uid://bmbvfbqiq26yo" path="res://Tileset/17.png" id="10_gq5eb"]
-[ext_resource type="Texture2D" uid="uid://bqm8gsvmpqx5x" path="res://Tileset/2.png" id="11_ah5p7"]
-[ext_resource type="Texture2D" uid="uid://c5qux88ghr2d4" path="res://Tileset/1.png" id="12_hqagh"]
-[ext_resource type="Texture2D" uid="uid://bp6gtsbrxtjyo" path="res://Tileset/22.png" id="13_vt8fj"]
-[ext_resource type="Texture2D" uid="uid://xlm8s8jttmju" path="res://Tileset/7.png" id="14_mnpcb"]
-[ext_resource type="Texture2D" uid="uid://dqq3dix7bibnf" path="res://Tileset/15.png" id="15_jy5o4"]
-[ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/8.png" id="16_ggit0"]
-[ext_resource type="Texture2D" uid="uid://bwb3yma86k6hl" path="res://Tileset/21.png" id="17_xgh0y"]
-[ext_resource type="Texture2D" uid="uid://bvk7rtp0m5lmo" path="res://Tileset/Mop.png" id="18_srel7"]
+[ext_resource type="Texture2D" uid="uid://ohpy7v4vndl1" path="res://Tileset/Element/128x64.png" id="1_53wku"]
+[ext_resource type="Texture2D" uid="uid://db3x8la7r0jyv" path="res://Tileset/Element/Robotad.png" id="2_1qh2w"]
+[ext_resource type="Texture2D" uid="uid://mtxatngq8spb" path="res://Tileset/Element/Box4.png" id="3_7n4pj"]
+[ext_resource type="Texture2D" uid="uid://b5215nfjyolr7" path="res://Tileset/Element/Bucket.png" id="4_fawxf"]
+[ext_resource type="Texture2D" uid="uid://bni3aj8wsao5u" path="res://Tileset/Element/Box3.png" id="5_chhqo"]
+[ext_resource type="Texture2D" uid="uid://bckxop3hlnp4i" path="res://Tileset/Element/Board2.png" id="7_ha425"]
+[ext_resource type="Texture2D" uid="uid://bawdfwqbc60g8" path="res://Tileset/Element/building_01.png" id="8_ahdok"]
+[ext_resource type="Texture2D" uid="uid://ffonoam12heg" path="res://Tileset/Element/building_05.png" id="9_48ke7"]
+[ext_resource type="Texture2D" uid="uid://bmbvfbqiq26yo" path="res://Tileset/Element/17.png" id="10_gq5eb"]
+[ext_resource type="Texture2D" uid="uid://bqm8gsvmpqx5x" path="res://Tileset/Element/2.png" id="11_ah5p7"]
+[ext_resource type="Texture2D" uid="uid://c5qux88ghr2d4" path="res://Tileset/Element/1.png" id="12_hqagh"]
+[ext_resource type="Texture2D" uid="uid://bp6gtsbrxtjyo" path="res://Tileset/Element/22.png" id="13_vt8fj"]
+[ext_resource type="Texture2D" uid="uid://xlm8s8jttmju" path="res://Tileset/Element/7.png" id="14_mnpcb"]
+[ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/Element/8.png" id="16_ggit0"]
+[ext_resource type="Texture2D" uid="uid://bwb3yma86k6hl" path="res://Tileset/Element/21.png" id="17_xgh0y"]
+[ext_resource type="Texture2D" uid="uid://bvk7rtp0m5lmo" path="res://Tileset/Element/Mop.png" id="18_srel7"]
 
 [node name="BAckgroundScene1" type="Node2D"]
 
@@ -36,14 +34,14 @@ texture = ExtResource("2_1qh2w")
 [node name="Box4" type="Sprite2D" parent="."]
 modulate = Color(0.7204674, 0.7204675, 0.7204674, 1)
 texture_filter = 1
-position = Vector2(339, 618)
+position = Vector2(372, 617)
 scale = Vector2(2, 2)
 texture = ExtResource("3_7n4pj")
 
 [node name="Bucket" type="Sprite2D" parent="."]
 modulate = Color(0.6706895, 0.6706895, 0.6706895, 1)
 texture_filter = 1
-position = Vector2(986, 597)
+position = Vector2(972.00006, 599)
 scale = Vector2(3, 3)
 texture = ExtResource("4_fawxf")
 
@@ -51,22 +49,14 @@ texture = ExtResource("4_fawxf")
 modulate = Color(0.74138474, 0.7413847, 0.74138457, 1)
 self_modulate = Color(0.83033526, 0.83033514, 0.83033514, 1)
 texture_filter = 1
-position = Vector2(297.00003, 608)
+position = Vector2(306, 608.00006)
 scale = Vector2(2.6, 2.6)
 texture = ExtResource("5_chhqo")
-
-[node name="Box5" type="Sprite2D" parent="."]
-modulate = Color(0.8431839, 0.8431839, 0.84318376, 1)
-self_modulate = Color(0.90359825, 0.90359825, 0.9035982, 1)
-texture_filter = 1
-position = Vector2(312, 606)
-scale = Vector2(2.7, 2.7)
-texture = ExtResource("6_kt2wd")
 
 [node name="Board2" type="Sprite2D" parent="."]
 modulate = Color(0.7708395, 0.77083945, 0.77083945, 1)
 texture_filter = 1
-position = Vector2(902.00006, 538)
+position = Vector2(957, 514)
 scale = Vector2(3, 3)
 texture = ExtResource("7_ha425")
 
@@ -91,13 +81,14 @@ texture = ExtResource("10_gq5eb")
 
 [node name="2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(709, 453)
+position = Vector2(620, 430)
 scale = Vector2(3.2, 3.2)
 texture = ExtResource("11_ah5p7")
 
 [node name="1" type="Sprite2D" parent="."]
+modulate = Color(0.8862616, 0.88626146, 0.8862615, 1)
 texture_filter = 1
-position = Vector2(420, 449)
+position = Vector2(519, 425)
 scale = Vector2(3.2, 3.2)
 texture = ExtResource("12_hqagh")
 
@@ -112,12 +103,6 @@ texture_filter = 1
 position = Vector2(558.00006, 568)
 scale = Vector2(4.558823, 3.2946908)
 texture = ExtResource("14_mnpcb")
-
-[node name="15" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(564, 511)
-scale = Vector2(3, 3)
-texture = ExtResource("15_jy5o4")
 
 [node name="8" type="Sprite2D" parent="."]
 texture_filter = 1

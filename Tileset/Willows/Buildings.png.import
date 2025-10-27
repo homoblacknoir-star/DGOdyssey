@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc6h8eqbwtene"
-path="res://.godot/imported/21.png-0889ef1d12720b5442ad145ecffa6ca1.ctex"
+uid="uid://bc7rgv3t75f1l"
+path="res://.godot/imported/Buildings.png-9c2f767234a650c98a35223aee0091d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/21.png"
-dest_files=["res://.godot/imported/21.png-0889ef1d12720b5442ad145ecffa6ca1.ctex"]
+source_file="res://Tileset/Willows/Buildings.png"
+dest_files=["res://.godot/imported/Buildings.png-9c2f767234a650c98a35223aee0091d2.ctex"]
 
 [params]
 

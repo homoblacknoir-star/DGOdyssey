@@ -26,6 +26,8 @@ directories/dch_directory={
 "Resources/unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
+"Dialog/timeline": "res://Dialog/timeline.dtl",
 "timeline": "res://Dialog/Timeline/timeline.dtl"
 }
 layout/style_directory={}
@@ -46,6 +48,17 @@ variables={
 "response": ""
 }
 }
+extensions_folder="res://addons/dialogic_additions"
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
 
 [dialogue_manager]
 

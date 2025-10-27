@@ -1,1 +1,71 @@
-uid://b5mhh3fa1bn58
+extends Area2D
+
+## 1. ลากฉากถัดไป (เช่น EP01.tscn) มาวางที่นี่
+@export var next_scene: PackedScene
+
+## 2. พิมพ์ชื่อ Timeline ที่จะให้เล่น (เช่น AtWindow)
+@export var timeline_name: String = "AtWindow"
+
+# ตัวแปรสำหรับเช็คว่าผู้เล่นอยู่ในระยะ
+var player_is_near: bool = false
+
+
+func _ready():
+	# ซ่อนปุ่ม "E" ตอนเริ่ม
+	$Label.hide()
+	
+	# (เชื่อมต่อ Signal ผ่านโค้ด จะได้ไม่ลืม)
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+	
+	
+func _process(_delta):
+	# อัปเดตการแสดงผล Label (วิธีนี้ดีกว่าการตั้งค่า .visible ทุกเฟรม)
+	$Label.visible = player_is_near
+	
+	# ตรวจสอบว่า "ถ้าผู้เล่นอยู่ในระยะ และ เพิ่งกด 'interact'"
+	if player_is_near and Input.is_action_just_pressed("interact"):
+		
+		# ป้องกันการกดซ้ำซ้อน (ตั้งค่าว่าไม่อยู่ในระยะชั่วคราว)
+		player_is_near = false
+		
+		# เรียกฟังก์ชันหลักของเรา
+		play_dialog_then_change_scene()
+	
+	
+func _on_body_entered(body):
+	if body is Player:
+		player_is_near = true
+
+func _on_body_exited(body: Node2D) -> void:
+	if body is Player:
+		player_is_near = false
+
+
+func play_dialog_then_change_scene():
+	
+	# --- 1. ตรวจสอบว่าตั้งค่าครบหรือยัง ---
+	# (Godot 3 ใช้ print_error)
+	if not next_scene:
+		print_error("ERROR: คุณยังไม่ได้ลาก 'Next Scene' มาใส่ใน Inspector!")
+		return
+	if timeline_name.is_empty():
+		print_error("ERROR: คุณยังไม่ได้ตั้ง 'Timeline Name' ใน Inspector!")
+		return
+
+	# --- 2. เริ่มเล่น Dialogic ---
+	print("กำลังเริ่มเล่น Dialogic: ", timeline_name)
+	var timeline = Dialogic.start(timeline_name)
+	
+	# --- 3. "จับการทำงาน" (รอจนกว่าจะเล่นเสร็จ) ---
+	#
+	# นี่คือไวยากรณ์ "หยุดรอ" ของ Godot 3 (ใช้ yield)
+	# "หยุดรอ" 'timeline' จนกว่าจะส่งสัญญาณ "timeline_ended"
+	#
+	yield(timeline, "timeline_ended")
+	
+	# --- 4. เมื่อ Dialogic เล่นเสร็จแล้ว ---
+	print("Dialogic จบแล้ว! กำลังเปลี่ยนฉาก...")
+	
+	# นี่คือฟังก์ชันเปลี่ยนฉากของ Godot 3 (ใช้ change_scene_to)
+	get_tree().change_scene_to(next_scene)
