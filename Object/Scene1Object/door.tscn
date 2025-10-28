@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://ukt41qjsie8f"]
+[gd_scene load_steps=8 format=4 uid="uid://ukt41qjsie8f"]
 
 [ext_resource type="Script" uid="uid://dnvq1jb10opey" path="res://Object/Scene1Object/door.gd" id="1_553xb"]
 [ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="1_n4f23"]
 [ext_resource type="Texture2D" uid="uid://bktqmwkr4wavc" path="res://Tileset/Buildings.png" id="2_2jkal"]
-[ext_resource type="PackedScene" uid="uid://ru35egj11akp" path="res://Scene/EP01.tscn" id="2_uhnt2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhnt2"]
 texture = ExtResource("2_2jkal")
@@ -309,7 +308,6 @@ anti_aliasing_size = 10.0
 
 [node name="Door" type="Area2D"]
 script = ExtResource("1_553xb")
-next_scene = ExtResource("2_uhnt2")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 texture_filter = 1

@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=4 uid="uid://b0ljxjpf2syce"]
 
-[ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="1_24h85"]
 [ext_resource type="Script" uid="uid://bk1kw3qrpp3hm" path="res://Scene/scene_1.gd" id="1_x74ip"]
 [ext_resource type="Texture2D" uid="uid://cxx26jykbljb7" path="res://Tileset/Tileset_Sheet/TileSet v1.0.png" id="2_6j7y5"]
+[ext_resource type="Texture2D" uid="uid://e1xlrglvjyjg" path="res://Background/City_in_different_time/mornin/7.png" id="2_f51dq"]
 [ext_resource type="PackedScene" uid="uid://drcdcfy74qi2u" path="res://background_scene_1.tscn" id="2_g4cdr"]
 [ext_resource type="Texture2D" uid="uid://d1g6lhe1h353a" path="res://Tileset/Tileset_Sheet/Tileset.png" id="4_eoyd3"]
 [ext_resource type="Texture2D" uid="uid://db4btcn3k7ihp" path="res://Tileset/Tileset_Sheet/FrameMap.png" id="8_bhfib"]
@@ -936,14 +936,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -463.0
-offset_top = -517.0
-offset_right = 1841.0
-offset_bottom = 779.0
+offset_left = -454.0
+offset_top = -195.0
+offset_right = 1850.0
+offset_bottom = 1101.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-texture = ExtResource("1_24h85")
+texture = ExtResource("2_f51dq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -979,7 +979,6 @@ scale = Vector2(2.7, 2.7)
 [node name="Door" parent="." instance=ExtResource("10_r7cf6")]
 position = Vector2(831, 530)
 scale = Vector2(3, 3)
-next_scene = null
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("26_c1u51")]
 process_mode = 1

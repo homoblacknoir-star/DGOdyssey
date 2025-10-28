@@ -13,11 +13,9 @@ func _process(_delta):
 		
 		## [แก้ไข] นี่คือส่วนที่เปลี่ยนจาก Dialogic
 		# "res://EP01.tscn" คือ Path ของฉาก (ลากไฟล์มาวางในวงเล็บได้เลย)
-		var error = get_tree().change_scene_to_file("res://EP01.tscn")
+		SceneTransition.change_scene(SceneTransition.Ep01)
 		
-		if error != OK:
-			printerr("ERROR: ไม่สามารถโหลดฉาก 'res://EP01.tscn' ได้, ตรวจสอบ Path")
-		## ------------------------------------------
+	
 	
 	
 func _on_body_entered(body: Node2D) -> void:

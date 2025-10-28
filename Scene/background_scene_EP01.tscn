@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://blvc4wdo6l1la"]
+
+[ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/Element/8.png" id="1_38dhf"]
+[ext_resource type="Texture2D" uid="uid://erk6wk0ct07q" path="res://Tileset/Element/18.png" id="2_hv2ns"]
+[ext_resource type="Texture2D" uid="uid://dreoyh8kg6u2u" path="res://Tileset/Element/12.png" id="3_tsi4g"]
+
+[node name="CanvasLayer" type="Node2D"]
+
+[node name="8" type="Sprite2D" parent="."]
+position = Vector2(322, 529)
+scale = Vector2(4, 4)
+texture = ExtResource("1_38dhf")
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(126, 528)
+scale = Vector2(4, 4)
+texture = ExtResource("1_38dhf")
+
+[node name="19" type="Sprite2D" parent="."]
+modulate = Color(0.8132577, 0.8132577, 0.81325763, 1)
+position = Vector2(604.00006, 539)
+scale = Vector2(2.341837, 5)
+texture = ExtResource("2_hv2ns")
+
+[node name="20" type="Sprite2D" parent="."]
+modulate = Color(0.8089983, 0.8089983, 0.8089982, 1)
+position = Vector2(397, 539)
+scale = Vector2(2.341837, 5)
+texture = ExtResource("2_hv2ns")
+
+[node name="21" type="Sprite2D" parent="."]
+modulate = Color(0.8089983, 0.8089983, 0.8089982, 1)
+position = Vector2(205, 538.00006)
+scale = Vector2(2.341837, 5)
+texture = ExtResource("2_hv2ns")
+
+[node name="12" type="Sprite2D" parent="."]
+position = Vector2(1050, 378)
+scale = Vector2(3, 3)
+texture = ExtResource("3_tsi4g")

@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 InteractionManager="*res://Object/InteractionManager.tscn"
+SceneTransition="*res://Scene/scene_transition.tscn"
 
 [dialogic]
 

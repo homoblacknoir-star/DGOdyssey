@@ -1,7 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://drcdcfy74qi2u"]
+[gd_scene load_steps=15 format=3 uid="uid://drcdcfy74qi2u"]
 
-[ext_resource type="Texture2D" uid="uid://ohpy7v4vndl1" path="res://Tileset/Element/128x64.png" id="1_53wku"]
-[ext_resource type="Texture2D" uid="uid://db3x8la7r0jyv" path="res://Tileset/Element/Robotad.png" id="2_1qh2w"]
 [ext_resource type="Texture2D" uid="uid://mtxatngq8spb" path="res://Tileset/Element/Box4.png" id="3_7n4pj"]
 [ext_resource type="Texture2D" uid="uid://b5215nfjyolr7" path="res://Tileset/Element/Bucket.png" id="4_fawxf"]
 [ext_resource type="Texture2D" uid="uid://bni3aj8wsao5u" path="res://Tileset/Element/Box3.png" id="5_chhqo"]
@@ -18,18 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://bvk7rtp0m5lmo" path="res://Tileset/Element/Mop.png" id="18_srel7"]
 
 [node name="BAckgroundScene1" type="Node2D"]
-
-[node name="128x64" type="Sprite2D" parent="."]
-modulate = Color(0.646029, 0.646029, 0.646029, 1)
-texture_filter = 1
-position = Vector2(585, 179)
-texture = ExtResource("1_53wku")
-
-[node name="Robotad" type="Sprite2D" parent="."]
-self_modulate = Color(0.57700837, 0.5770084, 0.57700837, 1)
-texture_filter = 1
-position = Vector2(585, 178)
-texture = ExtResource("2_1qh2w")
 
 [node name="Box4" type="Sprite2D" parent="."]
 modulate = Color(0.7204674, 0.7204675, 0.7204674, 1)

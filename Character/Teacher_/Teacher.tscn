@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://brmavxyka5pte"]
+
+[ext_resource type="Texture2D" uid="uid://de463c18i65a6" path="res://Character/Teacher_/Teacher_Idle.png" id="1_ihvpu"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+position = Vector2(-12.5, 0)
+texture = ExtResource("1_ihvpu")
