@@ -45,6 +45,8 @@ directories/dtl_directory={
 "EP01_v10.8_TH_full": "res://Dialog/EP01_v10.8_TH_full.dtl",
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
+"Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
+"Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
 layout/style_directory={}
@@ -101,6 +103,7 @@ folder_colors={
 "res://Character/": "purple",
 "res://Dialog/": "pink",
 "res://Font/": "orange",
+"res://Object/": "gray",
 "res://Scene/": "yellow",
 "res://Tileset/": "green",
 "res://UI/": "blue"
