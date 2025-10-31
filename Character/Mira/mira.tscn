@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://cov3n5g7uu746"]
+
+[ext_resource type="Script" uid="uid://i5mwjia3iqe6" path="res://Character/Mira/miraEP01s.gd" id="1_fqmmx"]
+[ext_resource type="Texture2D" uid="uid://bavw5q3yjutdq" path="res://Character/Mira/Idle.png" id="2_fqmmx"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_4xmu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa5ni"]
+atlas = ExtResource("2_fqmmx")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xmu6"]
+atlas = ExtResource("2_fqmmx")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p37y"]
+atlas = ExtResource("2_fqmmx")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1pel"]
+atlas = ExtResource("2_fqmmx")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvm3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa5ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xmu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8p37y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1pel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urvt4"]
+size = Vector2(56, 81)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6jw1"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="Mira" type="Area2D"]
+script = ExtResource("1_fqmmx")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, -5)
+scale = Vector2(2.2, 2.2)
+sprite_frames = SubResource("SpriteFrames_dvm3k")
+autoplay = "default"
+frame_progress = 0.9518755
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_urvt4")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -30.0
+offset_top = -45.0
+offset_right = 61.0
+offset_bottom = -30.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_4xmu6")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_m6jw1")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

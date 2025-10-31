@@ -1,0 +1,5 @@
+label EP01_teacher_redirect
+[signal argument="player_lock:true"]
+ครู (หัวเราะเบาๆ): ยังไม่ครบเลย ลองคุยกับเพื่อนให้ครบสามคนนะ แล้วค่อยคุยกับครู
+[signal argument="player_lock:false"]
+[end_timeline]

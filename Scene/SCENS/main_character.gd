@@ -1,6 +1,15 @@
 extends CharacterBody2D
 class_name Player
 
+@export var move_speed: float = 180.0
+var is_player_locked: bool = false
+
+func set_player_locked(v: bool) -> void:
+	is_player_locked = v
+	# ตัวเลือก: หยุดความเร็ว / รีเซ็ตอินพุต
+	if v:
+		velocity = Vector2.ZERO
+		
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
@@ -43,12 +52,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
 	# จัดการการกระโดด
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# สั่งให้ตัวละครเคลื่อนที่
 	move_and_slide()
+	
+
+
 	
 	

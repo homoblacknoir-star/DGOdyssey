@@ -1,0 +1,16 @@
+label EP01_intro
+[background path="res://assets/bg/classroom_day.png" fade="1.0"]
+[music file="res://assets/music/ep01_theme.ogg" loop="true" fade_length="1.2"]
+[signal argument="virtue_focus:citizenship"]
+[signal argument="player_lock:true"]
+join ครู (Default) left
+join นรา (Default) right
+Narration: เสียงออดดัง นักเรียนทยอยนั่งประจำที่ บรรยากาศคึกคักแบบเช้าวันเรียน
+ครู (ยิ้ม): สวัสดีทุกคน วันนี้ครูอยากชวนคุยเรื่องการคุยในกลุ่มออนไลน์ของห้องเรา
+ครู: ช่วงนี้มีหลายเรื่องถูกแชร์เร็ว บางอันก็ไม่ชัดเจน ครูอยากให้เราลองคิดด้วยกันว่าอะไรควร–ไม่ควร
+ครู: เดี๋ยวต่อจากนี้ ไปคุยกับเพื่อนใกล้ตัวสามคน เก็บมุมมองให้ครบ แล้วค่อยกลับมาสรุปกัน
+Narration: ครูมองไปรอบห้อง เห็นหลายคนพยักหน้าเห็นด้วย
+ครู (เนิบๆ): ระหว่างคุยกัน อย่าลืมให้เกียรติกันด้วยนะ ใครมีประสบการณ์โดนแชร์รูปหรือโดนล้อเลียน ลองเล่าให้เพื่อนฟังได้
+[signal argument="player_lock:false"]
+[signal argument="objective:set:คุยกับเพื่อน 3 คนให้ครบ แล้วกลับมาหาครู"]
+[end_timeline]

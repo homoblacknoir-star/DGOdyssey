@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="DigitalOdyssey_Prototype.kom (AnotherCopy)"
+config/name="DGOdyssey_kom"
 run/main_scene="uid://b4jtp6lok6w5s"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
@@ -24,12 +24,28 @@ SceneTransition="*res://Scene/scene_transition.tscn"
 
 directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
-"Resources/unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"Kai": "res://Dialog/Character/Kai.dch",
+"Mira": "res://Dialog/Character/Mira.dch",
+"Teacher": "res://Dialog/Character/Teacher.dch"
 }
 directories/dtl_directory={
-"AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
-"Dialog/timeline": "res://Dialog/timeline.dtl",
-"timeline": "res://Dialog/Timeline/timeline.dtl"
+"AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
+"EP01_TH_dtl_v10.8": "res://Dialog/EP01_TH_dtl_v10.8.dtl",
+"EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
+"EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
+"EP01_ending": "res://Dialog/test/EP01_ending.dtl",
+"EP01_intro": "res://Dialog/test/EP01_intro.dtl",
+"EP01_peer_boss": "res://Dialog/test/EP01_peer_boss.dtl",
+"EP01_peer_may": "res://Dialog/test/EP01_peer_may.dtl",
+"EP01_peer_pun": "res://Dialog/test/EP01_peer_pun.dtl",
+"EP01_quiz": "res://Dialog/test/EP01_quiz.dtl",
+"EP01_reflection": "res://Dialog/test/EP01_reflection.dtl",
+"EP01_teacher_redirect": "res://Dialog/test/EP01_teacher_redirect.dtl",
+"EP01_v10.8_TH_classroom_flow": "res://Dialog/EP01_v10.8_TH_classroom_flow.dtl",
+"EP01_v10.8_TH_full": "res://Dialog/EP01_v10.8_TH_full.dtl",
+"KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
+"Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
+"timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]

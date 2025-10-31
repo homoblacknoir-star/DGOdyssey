@@ -1,0 +1,24 @@
+label EP01_peer_pun
+[signal argument="player_lock:true"]
+join ปุณ (Default) left
+Narration: ปุณกำลังเล่าเรื่องมีมในกลุ่มให้อีกโต๊ะฟัง เสียงหัวเราะดังพอควร
+ปุณ (ขำๆ): มุกเมื่อคืนอย่างพีค แต่มีคนบอกว่าแรงไปนิด นายว่าไง
+นรา: แล้วคนที่โดนล้อเขารู้สึกยังไงบ้าง
+"คุยกับปุณยังไงดี"
+    - ไม่เป็นไรหรอก แค่ขำ ๆ เอง
+        set {civility} += -1
+        [signal argument="choice_taken:ปุณ,just_joking,-1"]
+        ปุณ (ยักไหล่): เออ ก็จริง… แต่บางทีก็แรงไป
+    - ลองตั้งกติกากลุ่มง่าย ๆ ว่า “ไม่พาดพิงระบุตัวคน” ไหม
+        set {safety} += 1
+        [signal argument="choice_taken:ปุณ,set_rules,+2"]
+        ปุณ (เริ่มจริงจัง): ถ้ามีกติกาชัด คนจะได้รู้ขอบเขต
+    - ถ้าจะใช้มีม ให้หลีกเลี่ยงคำที่ทำให้ใครอับอาย
+        set {virtue_citizenship} += 1
+        [signal argument="choice_taken:ปุณ,polite_meme,+2"]
+        ปุณ (พยักหน้า): โอเค เอาให้พอดี ๆ
+Narration: ปุณเก็บโพยมีมในเครื่อง แล้วบอกว่าจะลองเปลี่ยนคำบรรยายให้เบาลง
+[signal argument="objective:progress:+1"]
+[signal argument="peer_done:ปุณ"]
+[signal argument="player_lock:false"]
+[end_timeline]

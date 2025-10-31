@@ -1,0 +1,6 @@
+label EP01_check_all
+if {peer_done:เมย์} and {peer_done:ปุณ} and {peer_done:บอส}:
+\tjump EP01_back_to_teacher
+else:
+\tNarration: เหลือเพื่อนบางคนยังไม่ได้คุย ลองเดินไปหาอีกสักหน่อย
+\t[end_timeline]

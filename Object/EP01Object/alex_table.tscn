@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvlyuk4rdkxy6"]
+
+[ext_resource type="Script" uid="uid://nw5jeh6yakhq" path="res://Object/EP01Object/alex_table.gd" id="1_y6y3o"]
+[ext_resource type="Texture2D" uid="uid://xlm8s8jttmju" path="res://Tileset/Element/7.png" id="2_56ayy"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_vcg17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oex5e"]
+size = Vector2(26, 11)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0ubl"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="Alex_Table" type="Area2D"]
+script = ExtResource("1_y6y3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_56ayy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_oex5e")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -45.0
+offset_top = -36.0
+offset_right = 45.0
+offset_bottom = -21.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_vcg17")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_b0ubl")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

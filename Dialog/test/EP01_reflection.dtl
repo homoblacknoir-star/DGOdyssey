@@ -1,0 +1,17 @@
+label EP01_reflection
+[signal argument="player_lock:true"]
+join ครู (Default) left
+Narration: ครูยิ้มและพยักหน้าเบา ๆ
+ครู: ปิดท้ายวันนี้ แต่ละคนขอ “คำมั่น” สั้น ๆ ว่าจะทำอะไรเมื่อคุยกันในโลกออนไลน์
+"เลือกคำมั่น"
+    - ฉันจะตรวจสอบข้อเท็จจริงก่อนแชร์
+        set {virtue_citizenship} += 5
+        [signal argument="pledge_committed:ตรวจสอบก่อนแชร์"]
+    - ฉันจะไม่เปิดเผยข้อมูลส่วนตัวของผู้อื่นโดยไม่ได้รับอนุญาต
+        set {virtue_citizenship} += 5
+        [signal argument="pledge_committed:ไม่เปิดเผยข้อมูล"]
+    - ฉันจะเตือนเพื่อนอย่างสุภาพเมื่อเห็นการบูลลี่
+        set {virtue_citizenship} += 5
+        [signal argument="pledge_committed:เตือนเมื่อเห็นบูลลี่"]
+[signal argument="player_lock:false"]
+[end_timeline]

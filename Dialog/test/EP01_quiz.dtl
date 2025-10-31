@@ -1,0 +1,29 @@
+label EP01_quiz
+[signal argument="player_lock:true"]
+set {quiz_score} = 0
+"ข้อ 1) ก่อนแชร์โพสต์ที่กำลังไวรัล สิ่งที่ควรทำมากที่สุดคือ"
+    - ตรวจวันที่และแหล่งข่าวให้ชัด (+2)
+        set {quiz_score} += 2
+        [signal argument="quiz_answered:Q1,true,false"]
+    - ใส่แคปชันแรง ๆ ให้คนสนใจ (-1)
+        set {quiz_score} += -1
+        [signal argument="quiz_answered:Q1,false,true"]
+
+"ข้อ 2) ถ้ามีเพื่อนลงรูปที่ตัดต่อมาโดยไม่มีลิงก์อ้างอิง เราควร"
+    - ขอที่มาหรือลิงก์ต้นฉบับ (+2)
+        set {quiz_score} += 2
+        [signal argument="quiz_answered:Q2,true,false"]
+    - รีพอร์ตทันทีโดยไม่อธิบาย (-1)
+        set {quiz_score} += -1
+        [signal argument="quiz_answered:Q2,false,true"]
+
+"ข้อ 3) ถ้าจะใช้มีมตอบกลับในกลุ่มให้โอเคกับทุกคน ควร"
+    - เลี่ยงถ้อยคำทำให้อับอาย และดูความเหมาะสม (+2)
+        set {quiz_score} += 2
+        [signal argument="quiz_answered:Q3,true,false"]
+    - เอาแรงเข้าไว้ก่อน จะได้ตลก (-1)
+        set {quiz_score} += -1
+        [signal argument="quiz_answered:Q3,false,true"]
+
+[signal argument="player_lock:false"]
+[end_timeline]

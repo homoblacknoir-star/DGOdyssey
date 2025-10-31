@@ -1,9 +1,88 @@
-[gd_scene load_steps=2 format=3 uid="uid://brmavxyka5pte"]
+[gd_scene load_steps=11 format=3 uid="uid://brmavxyka5pte"]
 
 [ext_resource type="Texture2D" uid="uid://de463c18i65a6" path="res://Character/Teacher_/Teacher_Idle.png" id="1_ihvpu"]
+[ext_resource type="Script" uid="uid://uhvl0okv58cg" path="res://Character/Teacher_/teacher.gd" id="1_rpekn"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_adyxx"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_umnlj"]
+atlas = ExtResource("1_ihvpu")
+region = Rect2(0, 0, 48, 48)
 
-[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
-position = Vector2(-12.5, 0)
-texture = ExtResource("1_ihvpu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g42f"]
+atlas = ExtResource("1_ihvpu")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx2jn"]
+atlas = ExtResource("1_ihvpu")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qss02"]
+atlas = ExtResource("1_ihvpu")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvm3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umnlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g42f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx2jn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qss02")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urvt4"]
+size = Vector2(36, 81)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6jw1"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="CharacterBody2D" type="Area2D"]
+script = ExtResource("1_rpekn")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-19, -4.999998)
+scale = Vector2(2.2, 2.2)
+sprite_frames = SubResource("SpriteFrames_dvm3k")
+autoplay = "default"
+frame_progress = 0.46801785
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_urvt4")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 46.0
+offset_bottom = -30.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_adyxx")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_m6jw1")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

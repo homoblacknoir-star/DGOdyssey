@@ -1,0 +1,9 @@
+label EP01_back_to_teacher
+[signal argument="player_lock:true"]
+join ครู (Default) left
+Narration: นักเรียนทยอยเงียบลงเมื่อครูส่งสัญญาณ
+ครู (พอใจ): ฟังดูหลายกลุ่มคิดใกล้กันนะ สรุปสั้น ๆ ว่าเราอยากให้พื้นที่คุยของห้อง “ปลอดภัยและให้เกียรติ”
+ครู: ต่อไป ครูมีคำถามสั้น ๆ อยากชวนคิด
+[signal argument="player_lock:false"]
+[signal argument="start_quiz:EP01"]
+[end_timeline]

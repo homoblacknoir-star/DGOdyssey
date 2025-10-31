@@ -1,0 +1,6 @@
+label EP01_ending
+Narration: ระบบบันทึกคะแนนและคำมั่นของคุณแล้ว
+do EndingLogic.apply_delta("EP01",{ "virtue":"citizenship","quiz":{ "score": {quiz_score} }, "pledge": true })
+[wait time="0.6" hide_text="true"]
+Narration: ขอบคุณที่ช่วยกันทำให้ห้องเรียนของเราเป็นพื้นที่ที่คุยกันอย่างเคารพ
+[end_timeline]
