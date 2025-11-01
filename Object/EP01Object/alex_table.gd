@@ -10,7 +10,6 @@ func _ready():
 	pass
 var showInteractionLabel = false
 
-	
 func _process(_delta):
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):

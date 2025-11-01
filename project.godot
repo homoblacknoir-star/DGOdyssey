@@ -50,6 +50,7 @@ directories/dtl_directory={
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
+"TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
 "Timeline/AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
 "Timeline/timeline": "res://Dialog/Timeline/timeline.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"

@@ -5,6 +5,7 @@ var is_active: bool = true
 # ตัวแปรเช็คผู้เล่น: true = ผู้เล่นอยู่ในระยะ
 var player_is_near: bool = false
 var showInteractionLabel = false  # เพิ่มบรรทัดนี้
+var started_dialogue: bool = false  # ตัวแปรเช็คว่าเริ่ม dialogue แล้วหรือยัง
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
@@ -46,18 +47,24 @@ func _on_body_exited(body):
 		showInteractionLabel = false
 
 func _unhandled_input(event: InputEvent):
-	
 	# ถ้า 1.ผู้เล่นอยู่ใกล้ 2.ยังไม่เคยใช้ 3.กดปุ่ม "interact"
 	if player_is_near and is_active and event.is_action_pressed("interact"):
+		started_dialogue = true  # ตั้งค่าว่าเริ่ม dialogue แล้ว
 		Dialogic.start("res://Dialog/Timeline/EP01/KaiEP01.dtl")
-		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
-		is_active = false
-		
-		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false
+		# ไม่ต้อง disable ที่นี่ เพราะจะ disable ใน _on_dialogue_ended() แทน
 
-# เพิ่มฟังก์ชั่นเช็คว่าคุยหรือยัง
 func _on_dialogue_ended():
-	Global.has_talked_to_kai = true
-	is_active = false
-	Dialogic.timeline_ended.disconnect(_on_dialogue_ended)
+	# ตรวจสอบว่า Kai เป็นคนเริ่ม dialogue หรือไม่
+	print("=== Kai _on_dialogue_ended ===")
+	print("started_dialogue: ", started_dialogue)
+
+	if started_dialogue:
+		print("Setting has_talked_to_kai = true")
+		Global.has_talked_to_kai = true
+		is_active = false
+		showInteractionLabel = false
+		started_dialogue = false  # reset flag
+		# Only disconnect if still connected to avoid runtime errors
+		if Dialogic.timeline_ended.is_connected(_on_dialogue_ended):
+			Dialogic.timeline_ended.disconnect(_on_dialogue_ended)

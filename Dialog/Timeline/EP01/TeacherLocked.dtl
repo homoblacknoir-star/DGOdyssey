@@ -1,0 +1,7 @@
+if !Global.has_talked_to_kai and !Global.has_talked_to_mira:
+	Teacher: ลองไปคุยกับ Kai และ Mira ก่อนนะ
+elif !Global.has_talked_to_kai:
+	Teacher: ลองไปคุยกับ Kai ก่อนนะ
+elif !Global.has_talked_to_mira:
+	Teacher: ลองไปคุยกับ Mira ก่อนนะ
+[end_timeline]
