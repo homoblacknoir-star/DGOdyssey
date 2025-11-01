@@ -7,8 +7,7 @@ var player_is_near: bool = false
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+	pass
 var showInteractionLabel = false
 
 	

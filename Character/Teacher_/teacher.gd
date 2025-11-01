@@ -4,14 +4,16 @@ var is_active: bool = true
 
 # ตัวแปรเช็คผู้เล่น: true = ผู้เล่นอยู่ในระยะ
 var player_is_near: bool = false
+var showInteractionLabel = false  # เพิ่มบรรทัดนี้
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-var showInteractionLabel = false
-
+	#body_entered.connect(_on_body_entered)
+	#body_exited.connect(_on_body_exited)
 	
+	# เชื่อมต่อ Dialogic signal เท่านั้น
+	Dialogic.timeline_ended.connect(_on_dialogue_ended)
+
 func _process(_delta):
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
@@ -51,3 +53,8 @@ func _unhandled_input(event: InputEvent):
 		
 		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false
+
+func _on_dialogue_ended():
+	# ทำให้ไม่สามารถโต้ตอบได้อีก (ถ้าต้องการ)
+	is_active = false
+	print("จบการสนทนากับ Teacher แล้ว")

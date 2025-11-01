@@ -4,12 +4,11 @@ var is_active: bool = true
 
 # ตัวแปรเช็คผู้เล่น: true = ผู้เล่นอยู่ในระยะ
 var player_is_near: bool = false
+var showInteractionLabel = false  # เพิ่มบรรทัดนี้
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-var showInteractionLabel = false
+	pass
 
 func _process(_delta):
 	$Label.visible = showInteractionLabel
@@ -42,3 +41,4 @@ func _on_dialogue_ended():
 	Global.has_talked_to_mira = true
 	is_active = false
 	Dialogic.timeline_ended.disconnect(_on_dialogue_ended)
+	

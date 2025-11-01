@@ -4,18 +4,34 @@ var is_active: bool = true
 
 # ตัวแปรเช็คผู้เล่น: true = ผู้เล่นอยู่ในระยะ
 var player_is_near: bool = false
+var showInteractionLabel = false  # เพิ่มบรรทัดนี้
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-var showInteractionLabel = false
+	#body_entered.connect(_on_body_entered)
+	#body_exited.connect(_on_body_exited)
+#var showInteractionLabel = false
+
+	# เชื่อมต่อ signals พร้อมเช็คก่อน
+	if not body_entered.is_connected(_on_body_entered):
+		body_entered.connect(_on_body_entered)
+	
+	if not body_exited.is_connected(_on_body_exited):
+		body_exited.connect(_on_body_exited)
+	
+	# เชื่อมต่อ Dialogic signal
+	if not Dialogic.timeline_ended.is_connected(_on_dialogue_ended):
+		Dialogic.timeline_ended.connect(_on_dialogue_ended)
 
 	
 func _process(_delta):
+	#$Label.visible = showInteractionLabel
+	#if showInteractionLabel && Input.is_action_just_pressed("interact"):
+		#Dialogic.start("res://Dialog/Timeline/EP01/KaiEP01.dtl")
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/KaiEP01.dtl")
+		showInteractionLabel = false
 	
 func _on_body_entered(body):
 	# [แก้ไข] ตรวจสอบว่าเป็น Player และ Object ยังใช้ได้
