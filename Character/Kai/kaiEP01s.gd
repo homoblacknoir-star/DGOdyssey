@@ -35,10 +35,13 @@ func _unhandled_input(event: InputEvent):
 	if player_is_near and is_active and event.is_action_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/KaiEP01.dtl")
 		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
-		is_active = false 
+		is_active = false
 		
 		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false
-		
-		
-	
+
+# เพิ่มฟังก์ชั่นเช็คว่าคุยหรือยัง
+func _on_dialogue_ended():
+	Global.has_talked_to_kai = true
+	is_active = false
+	Dialogic.timeline_ended.disconnect(_on_dialogue_ended)

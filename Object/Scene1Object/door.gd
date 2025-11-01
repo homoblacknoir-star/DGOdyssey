@@ -15,13 +15,10 @@ func _process(_delta):
 		# "res://EP01.tscn" คือ Path ของฉาก (ลากไฟล์มาวางในวงเล็บได้เลย)
 		SceneTransition.change_scene(SceneTransition.Ep01)
 		
-	
-	
-	
 func _on_body_entered(body: Node2D) -> void:
-		if body is Player:
-			showInteractionLabel = true
+	if body is Player:
+		showInteractionLabel = true
 	
 func _on_body_exited(body: Node2D) -> void:
-		if body is Player:
-			showInteractionLabel = false
+	if body is Player:
+		showInteractionLabel = false

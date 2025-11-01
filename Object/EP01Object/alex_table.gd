@@ -35,7 +35,7 @@ func _unhandled_input(event: InputEvent):
 	if player_is_near and is_active and event.is_action_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/Lesson.dtl")
 		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
-		is_active = false 
+		is_active = false
 		
 		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false

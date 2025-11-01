@@ -11,12 +11,11 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 var showInteractionLabel = false
 
-	
 func _process(_delta):
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/Mira.dtl")
-	
+
 func _on_body_entered(body):
 	# [แก้ไข] ตรวจสอบว่าเป็น Player และ Object ยังใช้ได้
 	if body is Player and is_active:
@@ -35,7 +34,11 @@ func _unhandled_input(event: InputEvent):
 	if player_is_near and is_active and event.is_action_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/Mira.dtl")
 		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
-		is_active = false 
+		is_active = false
 		
 		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false
+func _on_dialogue_ended():
+	Global.has_talked_to_mira = true
+	is_active = false
+	Dialogic.timeline_ended.disconnect(_on_dialogue_ended)

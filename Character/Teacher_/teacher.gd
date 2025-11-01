@@ -15,7 +15,19 @@ var showInteractionLabel = false
 func _process(_delta):
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
-		Dialogic.start("res://Dialog/Timeline/EP01/Teacher.dtl")
+		# เช็คเงื่อนไขก่อนเริ่มบทสนทนา
+		if Global.can_talk_to_teacher():
+			Dialogic.start("res://Dialog/Timeline/EP01/Teacher.dtl")
+		else:
+			# แสดงข้อความเตือนว่าต้องคุยกับ Kai และ Mira ก่อน
+			var missing = []
+			if not Global.has_talked_to_kai:
+				missing.append("Kai")
+			if not Global.has_talked_to_mira:
+				missing.append("Mira")
+			print("ลองไปคุยกับ " + ", ".join(missing) + " ก่อน!")
+			# หรือใช้ Dialogic แสดงข้อความแทน
+			# Dialogic.start("res://Dialog/Timeline/EP01/TeacherLocked.dtl")
 	
 func _on_body_entered(body):
 	# [แก้ไข] ตรวจสอบว่าเป็น Player และ Object ยังใช้ได้
@@ -35,7 +47,7 @@ func _unhandled_input(event: InputEvent):
 	if player_is_near and is_active and event.is_action_pressed("interact"):
 		Dialogic.start("res://Dialog/Timeline/EP01/Teacher.dtl")
 		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
-		is_active = false 
+		is_active = false
 		
 		# [เพิ่ม] ซ่อน Label ทันที
 		showInteractionLabel = false

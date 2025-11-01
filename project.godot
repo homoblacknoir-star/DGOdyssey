@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 InteractionManager="*res://Object/InteractionManager.tscn"
 SceneTransition="*res://Scene/scene_transition.tscn"
+Global="*res://global.gd"
 
 [dialogic]
 
@@ -26,10 +27,12 @@ directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
 "Kai": "res://Dialog/Character/Kai.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
-"Teacher": "res://Dialog/Character/Teacher.dch"
+"Teacher": "res://Dialog/Character/Teacher.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
+"Dialog/timeline": "res://Dialog/timeline.dtl",
 "EP01_TH_dtl_v10.8": "res://Dialog/EP01_TH_dtl_v10.8.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
@@ -47,6 +50,8 @@ directories/dtl_directory={
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
+"Timeline/AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
+"Timeline/timeline": "res://Dialog/Timeline/timeline.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
 layout/style_directory={}
