@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b1yfmtnqolmt"]
+[gd_scene load_steps=18 format=4 uid="uid://b1yfmtnqolmt"]
 
 [ext_resource type="Texture2D" uid="uid://8yeg548gjeox" path="res://Background/City_in_different_time/noon/9.png" id="1_e6ebe"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_37nqt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cug43e6p1dbq4" path="res://Tileset/Tileset_Sheet/decorations.png" id="5_maxsb"]
 [ext_resource type="PackedScene" uid="uid://ben6w31324xv4" path="res://Scene/background_scene_EP02.tscn" id="7_kls5c"]
 [ext_resource type="PackedScene" uid="uid://bwaqxopoi3y2x" path="res://Scene/SCENS/main_character.tscn" id="8_w4vjy"]
+[ext_resource type="PackedScene" uid="uid://blvwdbn3ru8w6" path="res://Character/Kai/kaiEP02.tscn" id="9_w4vjy"]
 [ext_resource type="PackedScene" uid="uid://dhiy4o5ovkcxg" path="res://Object/EP02Object/hall_door.tscn" id="10_4asbp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypl2o"]
@@ -1684,5 +1685,9 @@ scale = Vector2(3, 3)
 [node name="Node2D" parent="." instance=ExtResource("7_kls5c")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("8_w4vjy")]
-position = Vector2(280, 490.00003)
+position = Vector2(95, 498.00003)
 scale = Vector2(0.9, 0.9)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("9_w4vjy")]
+position = Vector2(564, 488)
+scale = Vector2(1.98, 1.98)

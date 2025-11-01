@@ -6848,11 +6848,11 @@ scale = Vector2(0.62045455, 0.39090908)
 texture = ExtResource("13_ubnjr")
 
 [node name="Teacher" parent="." instance=ExtResource("13_ygkgm")]
-position = Vector2(907, 458)
+position = Vector2(910, 452)
 scale = Vector2(2.5, 2.5)
 
 [node name="Kai" parent="." instance=ExtResource("15_1r8gp")]
-position = Vector2(157, 484)
+position = Vector2(159, 488)
 scale = Vector2(2, 2)
 
 [node name="Kai_Chair" type="Sprite2D" parent="."]
@@ -6861,7 +6861,7 @@ scale = Vector2(4, 4)
 texture = ExtResource("17_pi6qp")
 
 [node name="Mira" parent="." instance=ExtResource("17_fnpbc")]
-position = Vector2(545, 483)
+position = Vector2(567, 485)
 scale = Vector2(2, 2)
 
 [node name="Mira_Chair" type="Sprite2D" parent="."]
@@ -6874,5 +6874,5 @@ position = Vector2(374, 496)
 scale = Vector2(2, 2)
 
 [node name="Alex" parent="." instance=ExtResource("14_ubnjr")]
-position = Vector2(273, 492.00003)
+position = Vector2(274, 502)
 scale = Vector2(0.9, 0.9)

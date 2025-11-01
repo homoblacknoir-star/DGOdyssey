@@ -25,15 +25,15 @@ Global="*res://global.gd"
 
 directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
+"Henry": "res://Dialog/Character/Henry.dch",
 "Kai": "res://Dialog/Character/Kai.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
 "Teacher": "res://Dialog/Character/Teacher.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Alexhome/timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl",
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
-"Dialog/timeline": "res://Dialog/timeline.dtl",
-"EP01_TH_dtl_v10.8": "res://Dialog/EP01_TH_dtl_v10.8.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
 "EP01_ending": "res://Dialog/test/EP01_ending.dtl",
@@ -44,8 +44,6 @@ directories/dtl_directory={
 "EP01_quiz": "res://Dialog/test/EP01_quiz.dtl",
 "EP01_reflection": "res://Dialog/test/EP01_reflection.dtl",
 "EP01_teacher_redirect": "res://Dialog/test/EP01_teacher_redirect.dtl",
-"EP01_v10.8_TH_classroom_flow": "res://Dialog/EP01_v10.8_TH_classroom_flow.dtl",
-"EP01_v10.8_TH_full": "res://Dialog/EP01_v10.8_TH_full.dtl",
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
@@ -53,7 +51,8 @@ directories/dtl_directory={
 "TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
 "Timeline/AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
 "Timeline/timeline": "res://Dialog/Timeline/timeline.dtl",
-"timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
+"friends": "res://Dialog/Timeline/EP02/friends.dtl",
+"timeline": "res://Dialog/timeline.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]

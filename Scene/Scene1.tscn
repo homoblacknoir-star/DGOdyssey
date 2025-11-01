@@ -983,4 +983,4 @@ scale = Vector2(3, 3)
 [node name="CharacterBody2D" parent="." instance=ExtResource("26_c1u51")]
 process_mode = 1
 self_modulate = Color(0.8132577, 0.8132577, 0.81325763, 1)
-position = Vector2(711, 531)
+position = Vector2(714, 538)

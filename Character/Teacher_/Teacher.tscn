@@ -83,9 +83,8 @@ script = ExtResource("1_rpekn")
 position = Vector2(9.536743e-07, 11)
 scale = Vector2(1.40625, 1.40625)
 sprite_frames = SubResource("SpriteFrames_dvm3k")
-animation = &"idle"
+animation = &"idle_left"
 autoplay = "idle_left"
-frame_progress = 0.23708235
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 7)

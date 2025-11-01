@@ -177,7 +177,7 @@ scale = Vector2(3.25, 3.25)
 sprite_frames = SubResource("SpriteFrames_4nvha")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.45283762
+frame_progress = 0.6130013
 speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
