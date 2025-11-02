@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c1mjmocht54hx"]
+[gd_scene load_steps=35 format=3 uid="uid://c1mjmocht54hx"]
 
 [ext_resource type="Script" uid="uid://w0klie0dde85" path="res://Character/Kai/kaiEP01s.gd" id="1_mxyro"]
 [ext_resource type="Texture2D" uid="uid://cs22kegbj1mvv" path="res://Character/Kai/kai.png" id="2_mxyro"]
@@ -112,6 +112,10 @@ region = Rect2(384, 2624, 64, 64)
 atlas = ExtResource("2_mxyro")
 region = Rect2(448, 2624, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxyro"]
+atlas = ExtResource("2_mxyro")
+region = Rect2(128, 2112, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dvm3k"]
 animations = [{
 "frames": [{
@@ -224,6 +228,14 @@ animations = [{
 "loop": true,
 "name": &"run_right",
 "speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxyro")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urvt4"]
@@ -245,9 +257,8 @@ script = ExtResource("1_mxyro")
 position = Vector2(0, 5)
 scale = Vector2(1.459375, 1.459375)
 sprite_frames = SubResource("SpriteFrames_dvm3k")
-animation = &"idle_right"
+animation = &"sit"
 autoplay = "idle_right"
-frame_progress = 0.1612921
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 7)

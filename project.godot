@@ -111,6 +111,7 @@ folder_colors={
 "res://Object/": "gray",
 "res://Scene/": "yellow",
 "res://Tileset/": "green",
+"res://Tileset/Tileset_Sheet/": "red",
 "res://UI/": "blue"
 }
 

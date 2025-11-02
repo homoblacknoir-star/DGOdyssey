@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://gw4ybpen70f6"]
+
+[ext_resource type="Texture2D" uid="uid://brloaidr3v4pt" path="res://Background/City_in_different_time/Sunraising/10.png" id="1_cv3vg"]
+
+[node name="EP04" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -102.0
+offset_right = 1153.0
+offset_bottom = 644.0
+texture = ExtResource("1_cv3vg")
+expand_mode = 1

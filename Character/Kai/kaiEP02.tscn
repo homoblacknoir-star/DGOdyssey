@@ -165,7 +165,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -227,7 +227,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urvt4"]
-size = Vector2(56, 81)
+size = Vector2(142, 81)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6jw1"]
 bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
@@ -251,7 +251,7 @@ frame_progress = 0.1612921
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 7)
+position = Vector2(-44, 7)
 shape = SubResource("RectangleShape2D_urvt4")
 
 [node name="Label" type="Label" parent="."]

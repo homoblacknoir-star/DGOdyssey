@@ -1,25 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://cov3n5g7uu746"]
+[gd_scene load_steps=8 format=3 uid="uid://cov3n5g7uu746"]
 
 [ext_resource type="Script" uid="uid://i5mwjia3iqe6" path="res://Character/Mira/miraEP01s.gd" id="1_fqmmx"]
 [ext_resource type="Texture2D" uid="uid://dh81kj7svo88i" path="res://Character/Mira/mira.png" id="2_fqmmx"]
 [ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_4xmu6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aa5ni"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqmmx"]
 atlas = ExtResource("2_fqmmx")
-region = Rect2(0, 1536, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4xmu6"]
-atlas = ExtResource("2_fqmmx")
-region = Rect2(64, 1536, 64, 64)
+region = Rect2(128, 2112, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dvm3k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aa5ni")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4xmu6")
+"texture": SubResource("AtlasTexture_fqmmx")
 }],
 "loop": true,
 "name": &"idle",

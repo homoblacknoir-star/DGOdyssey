@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bwaqxopoi3y2x"]
+[gd_scene load_steps=23 format=3 uid="uid://bwaqxopoi3y2x"]
 
 [ext_resource type="Script" uid="uid://b31vhxvg0laae" path="res://Scene/SCENS/main_character.gd" id="1_3rkeb"]
 [ext_resource type="Texture2D" uid="uid://7pygfy0y5fny" path="res://Character/Alex/alex.png" id="2_3rkeb"]
@@ -30,10 +30,6 @@ region = Rect2(64, 1536, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bcixh"]
 atlas = ExtResource("2_3rkeb")
 region = Rect2(0, 1856, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8r0kd"]
-atlas = ExtResource("2_3rkeb")
-region = Rect2(64, 1856, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0uvam"]
 atlas = ExtResource("2_3rkeb")
@@ -119,9 +115,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_bcixh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8r0kd")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_0uvam")
 }, {
 "duration": 1.0,
@@ -132,10 +125,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.21,
 "texture": SubResource("AtlasTexture_870h2")
 }, {
 "duration": 1.0,
@@ -161,7 +154,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 16.0
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f48oi"]
@@ -172,12 +165,11 @@ script = ExtResource("1_3rkeb")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -3)
+position = Vector2(-3.0000002, -5)
 scale = Vector2(3.25, 3.25)
 sprite_frames = SubResource("SpriteFrames_4nvha")
-animation = &"idle"
+animation = &"running"
 autoplay = "idle"
-frame_progress = 0.6130013
 speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
