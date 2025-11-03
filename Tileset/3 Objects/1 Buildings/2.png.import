@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6tuchw5w12y6"
-path="res://.godot/imported/japanese-school_8x8-final.tileset.png-0ecf9e2ad5c2fe25d9dac1e656f0969f.ctex"
+uid="uid://rgkw3bkeu7e7"
+path="res://.godot/imported/2.png-06f19b08972c47bb4a930a774a4024bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/Tileset_Sheet/japanese-school_8x8-final.tileset.png"
-dest_files=["res://.godot/imported/japanese-school_8x8-final.tileset.png-0ecf9e2ad5c2fe25d9dac1e656f0969f.ctex"]
+source_file="res://Tileset/3 Objects/1 Buildings/2.png"
+dest_files=["res://.godot/imported/2.png-06f19b08972c47bb4a930a774a4024bd.ctex"]
 
 [params]
 

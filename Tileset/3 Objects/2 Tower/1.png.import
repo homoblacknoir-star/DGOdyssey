@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdtta0o3lyf5n"
-path="res://.godot/imported/school.png-dfeb60a047ff5f1860ecd94bcd55964c.ctex"
+uid="uid://cgdrcvke31hn6"
+path="res://.godot/imported/1.png-09dab00ccca5e13543bd54e8c99c846f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/Tileset_Sheet/school.png"
-dest_files=["res://.godot/imported/school.png-dfeb60a047ff5f1860ecd94bcd55964c.ctex"]
+source_file="res://Tileset/3 Objects/2 Tower/1.png"
+dest_files=["res://.godot/imported/1.png-09dab00ccca5e13543bd54e8c99c846f.ctex"]
 
 [params]
 

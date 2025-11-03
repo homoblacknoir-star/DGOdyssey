@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://ru35egj11akp"]
+[gd_scene load_steps=33 format=4 uid="uid://ru35egj11akp"]
 
 [ext_resource type="Script" uid="uid://dmuwky7jmlcfy" path="res://Scene/EP01.gd" id="1_plrav"]
 [ext_resource type="Texture2D" uid="uid://c2xbv7sk2yks1" path="res://Background/City_in_different_time/ClearSky/7.png" id="2_lhv7l"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cd8j0tfhfojpc" path="res://Tileset/Tileset_Sheet/main_tileset.png" id="7_tn1un"]
 [ext_resource type="Texture2D" uid="uid://gc3uujew250y" path="res://Tileset/Tileset_Sheet/IndustrialTile_05.png" id="8_32qdw"]
 [ext_resource type="Texture2D" uid="uid://bktqmwkr4wavc" path="res://Tileset/Buildings.png" id="9_nu1tn"]
-[ext_resource type="Texture2D" uid="uid://b6tuchw5w12y6" path="res://Tileset/Tileset_Sheet/japanese-school_8x8-final.tileset.png" id="9_phciq"]
 [ext_resource type="Texture2D" uid="uid://dpdmpex1ajgod" path="res://UI/Interface windows.png" id="11_tn1un"]
 [ext_resource type="PackedScene" uid="uid://blvc4wdo6l1la" path="res://Scene/background_scene_EP01.tscn" id="12_kt487"]
 [ext_resource type="Texture2D" uid="uid://drhg5eacmnvm1" path="res://Tileset/Facebook-Page-Mockup-2019-0.jpg" id="13_ubnjr"]
@@ -1424,7 +1423,6 @@ texture = ExtResource("8_32qdw")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tn1un"]
-texture = ExtResource("9_phciq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2218,7 +2216,6 @@ texture = ExtResource("6_phciq")
 19:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pi6qp"]
-texture = ExtResource("9_phciq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

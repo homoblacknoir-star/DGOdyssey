@@ -1728,12 +1728,6 @@ scale = Vector2(1.98, 1.98)
 position = Vector2(773.00006, 525)
 scale = Vector2(2.9937499, 2.88)
 
-[node name="Mira_doll" type="AnimatedSprite2D" parent="friends&bench"]
-position = Vector2(-110.56372, -9.722229)
-scale = Vector2(0.93528193, 0.97222215)
-sprite_frames = SubResource("SpriteFrames_3ikf7")
-frame_progress = 0.50727916
-
 [node name="Bench" type="Sprite2D" parent="friends&bench"]
 position = Vector2(-127.89984, -0.34721375)
 texture = ExtResource("11_x7w5p")
@@ -1748,3 +1742,9 @@ texture = ExtResource("11_x7w5p")
 [node name="Bench2" type="Sprite2D" parent="friends&bench"]
 position = Vector2(-64.13364, -0.34721375)
 texture = ExtResource("11_x7w5p")
+
+[node name="Mira_doll" type="AnimatedSprite2D" parent="."]
+position = Vector2(441.99988, 496.99997)
+scale = Vector2(2.8000004, 2.8)
+sprite_frames = SubResource("SpriteFrames_3ikf7")
+frame_progress = 0.23870775
