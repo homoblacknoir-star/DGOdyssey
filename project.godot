@@ -32,8 +32,8 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Alexhome/timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl",
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
+"Dialog/timeline": "res://Dialog/timeline.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
 "EP01_ending": "res://Dialog/test/EP01_ending.dtl",
@@ -52,7 +52,7 @@ directories/dtl_directory={
 "Timeline/AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
 "Timeline/timeline": "res://Dialog/Timeline/timeline.dtl",
 "friends": "res://Dialog/Timeline/EP02/friends.dtl",
-"timeline": "res://Dialog/timeline.dtl"
+"timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
