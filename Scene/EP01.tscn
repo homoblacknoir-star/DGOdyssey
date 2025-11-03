@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c1mjmocht54hx" path="res://Character/Kai/Kai.tscn" id="15_1r8gp"]
 [ext_resource type="PackedScene" uid="uid://cov3n5g7uu746" path="res://Character/Mira/mira.tscn" id="17_fnpbc"]
 [ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/Element/8.png" id="17_pi6qp"]
-[ext_resource type="PackedScene" uid="uid://ukt41qjsie8f" path="res://Object/Scene1Object/door.tscn" id="19_fnpbc"]
+[ext_resource type="PackedScene" uid="uid://cqkarcgoes4ru" path="res://Object/EP01Object/EP01Door.tscn" id="18_fnpbc"]
 [ext_resource type="PackedScene" uid="uid://bvlyuk4rdkxy6" path="res://Object/EP01Object/alex_table.tscn" id="19_plrav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kt487"]
@@ -6834,10 +6834,6 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAABAAUAAAATAAYAAAACAAUAAAAUAAYAAAADAAUAAAAVAAYAAAAGAAUAAAATAAYAAAAHAAUAAAAUAAYAAAAIAAUAAAAVAAYAAAALAAUAAAATAAYAAAAMAAUAAAAUAAYAAAANAAUAAAAVAAYAAAAQAAUAAAATAAYAAAARAAUAAAAUAAYAAAASAAUAAAAVAAYAAAAUAAUAAAATAAYAAAAVAAUAAAAUAAYAAAAWAAUAAAAVAAYAAAAPAAcAAAASAAMAAAAPAAgAAAASAAQAAAAPAAkAAAASAAUAAAAQAAcAAAATAAMAAAAQAAgAAAATAAQAAAAQAAkAAAATAAUAAAARAAcAAAASAAMAAAARAAgAAAASAAQAAAARAAkAAAASAAUAAAASAAcAAAATAAMAAAASAAgAAAATAAQAAAASAAkAAAATAAUAAAATAAcAAAAUAAMAAAATAAgAAAAUAAQAAAATAAkAAAAUAAUAAAAOAAcAAAARAAMAAAAOAAgAAAARAAQAAAAOAAkAAAARAAUAAAABAAYAAAAMAAYAAAACAAYAAAANAAYAAAADAAYAAAAPAAYAAAAEAAYAAAAQAAYAAAAEAAUAAAANAAQAAAAWAAYAAAAKAAYAAAATAAUAAAAJAAMAAAATAAYAAAAOAAYAAAAUAAYAAAAPAAYAAAAVAAYAAAANAAUAAAA=")
 tile_set = SubResource("TileSet_tn1un")
 
-[node name="Door" parent="." instance=ExtResource("19_fnpbc")]
-position = Vector2(1039, 480)
-scale = Vector2(3, 3)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("12_kt487")]
 
 [node name="FacebookPageMockup20190" type="Sprite2D" parent="CanvasLayer"]
@@ -6848,7 +6844,7 @@ scale = Vector2(0.62045455, 0.39090908)
 texture = ExtResource("13_ubnjr")
 
 [node name="Teacher" parent="." instance=ExtResource("13_ygkgm")]
-position = Vector2(910, 452)
+position = Vector2(898, 453)
 scale = Vector2(2.5, 2.5)
 
 [node name="Kai" parent="." instance=ExtResource("15_1r8gp")]
@@ -6873,8 +6869,12 @@ texture = ExtResource("17_pi6qp")
 position = Vector2(374, 496)
 scale = Vector2(2, 2)
 
+[node name="EP01Door" parent="." instance=ExtResource("18_fnpbc")]
+position = Vector2(1051, 518)
+scale = Vector2(3, 3)
+
 [node name="Alex" parent="." instance=ExtResource("14_ubnjr")]
-position = Vector2(274, 502)
+position = Vector2(34, 499.00003)
 scale = Vector2(0.9, 0.9)
 
 [node name="Camera2D" type="Camera2D" parent="Alex"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7yf0fdxnwyal"
-path="res://.godot/imported/Walk.png-27a089c6a2931878eb2b72cac948ee2c.ctex"
+uid="uid://xlls1sq0r0p3"
+path="res://.godot/imported/tilemap.png-7cf907a0d89a6ad948cd6c497c5df73b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialog/Timeline/Walk.png"
-dest_files=["res://.godot/imported/Walk.png-27a089c6a2931878eb2b72cac948ee2c.ctex"]
+source_file="res://Tileset/Tileset_Sheet/tilemap.png"
+dest_files=["res://.godot/imported/tilemap.png-7cf907a0d89a6ad948cd6c497c5df73b.ctex"]
 
 [params]
 

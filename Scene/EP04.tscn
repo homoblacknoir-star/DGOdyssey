@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://gw4ybpen70f6"]
 
-[ext_resource type="Texture2D" uid="uid://dvob0kedhewv5" path="res://Background/City_in_different_time/abouttodark/7.png" id="1_jep0x"]
+[ext_resource type="Texture2D" uid="uid://8yeg548gjeox" path="res://Background/City_in_different_time/noon/9.png" id="1_2ku4a"]
 [ext_resource type="Texture2D" uid="uid://cs836nurrgejv" path="res://Tileset/Tileset_Sheet/Swamp.png" id="2_spqk1"]
 [ext_resource type="Texture2D" uid="uid://drwdbcum0vior" path="res://Tileset/Tileset.png" id="3_g0fqs"]
 [ext_resource type="Texture2D" uid="uid://bpexe4ianrvwv" path="res://Tileset/fishport/Pier_Tiles.png" id="4_ud33o"]
@@ -956,7 +956,7 @@ offset_left = 2.0
 offset_top = -115.0
 offset_right = 1155.0
 offset_bottom = 631.0
-texture = ExtResource("1_jep0x")
+texture = ExtResource("1_2ku4a")
 expand_mode = 1
 
 [node name="ground" type="TileMapLayer" parent="."]

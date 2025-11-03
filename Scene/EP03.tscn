@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=4 uid="uid://dhynnrdyqc4po"]
 
-[ext_resource type="Texture2D" uid="uid://8yeg548gjeox" path="res://Background/City_in_different_time/noon/9.png" id="1_ettdo"]
+[ext_resource type="Texture2D" uid="uid://dvob0kedhewv5" path="res://Background/City_in_different_time/abouttodark/7.png" id="1_rvetj"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_7crhm"]
 [ext_resource type="Texture2D" uid="uid://b5a7e8tebp2ci" path="res://Tileset/Tileset_Sheet/sprite sheet 16x16px seamless textures.png" id="3_yg0hb"]
 [ext_resource type="Texture2D" uid="uid://cxx26jykbljb7" path="res://Tileset/Tileset_Sheet/TileSet v1.0.png" id="4_leu2w"]
@@ -2333,7 +2333,7 @@ offset_left = 2.0
 offset_top = -121.0
 offset_right = 1156.0
 offset_bottom = 526.0
-texture = ExtResource("1_ettdo")
+texture = ExtResource("1_rvetj")
 expand_mode = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

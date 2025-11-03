@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=4 uid="uid://jxs5kyqvgche"]
+
+[ext_resource type="Texture2D" uid="uid://bl05h8h1xscaa" path="res://Tileset/tileset_city_free/layer1.png" id="1_3pdan"]
+[ext_resource type="Script" uid="uid://dhcg55p4hx22f" path="res://Object/EP08Object/ep_08_exit.gd" id="1_bjq16"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_bjq16"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoxp7"]
+texture = ExtResource("1_3pdan")
+2:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3u204"]
+sources/0 = SubResource("TileSetAtlasSource_eoxp7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omlyc"]
+size = Vector2(45, 69)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c87q"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="EP08Exit" type="Area2D"]
+script = ExtResource("1_bjq16")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(1.5, 1.5)
+tile_map_data = PackedByteArray("AAD///7/AAAFAAYAAAD/////AAAFAAcAAAD//wAAAAAFAAgAAAAAAP7/AAAGAAYAAAAAAP//AAAGAAcAAAAAAAAAAAAGAAgAAAA=")
+tile_set = SubResource("TileSet_3u204")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -11.5)
+shape = SubResource("RectangleShape2D_omlyc")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -35.0
+offset_top = -67.0
+offset_right = 37.0
+offset_bottom = -52.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_bjq16")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_5c87q")
+text = "[ E ] Enter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
