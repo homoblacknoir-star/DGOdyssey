@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DGOdyssey_kom (Copy)"
-run/main_scene="uid://b4jtp6lok6w5s"
+run/main_scene="uid://cjfike4qd76n6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]
@@ -30,6 +30,7 @@ directories/dch_directory={
 "Kom-puter": "res://Character/Kom-puter.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
 "Teacher": "res://Dialog/Character/Teacher.dch",
+"TechTeacher": "res://Dialog/Character/TechTeacher.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
