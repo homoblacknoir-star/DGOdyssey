@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://blvc4wdo6l1la"]
+[gd_scene load_steps=5 format=3 uid="uid://blvc4wdo6l1la"]
 
 [ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/Element/8.png" id="1_38dhf"]
 [ext_resource type="Texture2D" uid="uid://erk6wk0ct07q" path="res://Tileset/Element/18.png" id="2_hv2ns"]
 [ext_resource type="Texture2D" uid="uid://dreoyh8kg6u2u" path="res://Tileset/Element/12.png" id="3_tsi4g"]
+[ext_resource type="Texture2D" uid="uid://d080a3iv8u07r" path="res://Tileset/2 Billboard/128x64.png" id="4_hv2ns"]
 
 [node name="CanvasLayer" type="Node2D"]
 
@@ -39,3 +40,8 @@ modulate = Color(0.7539839, 0.75398386, 0.75398386, 1)
 position = Vector2(851.00006, 296)
 scale = Vector2(3, 3)
 texture = ExtResource("3_tsi4g")
+
+[node name="128x64" type="Sprite2D" parent="."]
+position = Vector2(788, 403)
+scale = Vector2(2, 2)
+texture = ExtResource("4_hv2ns")
