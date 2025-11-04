@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DGOdyssey_kom (Copy)"
-run/main_scene="uid://cjfike4qd76n6"
+run/main_scene="uid://b4jtp6lok6w5s"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]

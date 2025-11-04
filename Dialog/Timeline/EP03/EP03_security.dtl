@@ -7,314 +7,281 @@
 # Rule: ระหว่างครูสอน ผู้เล่นขยับไม่ได้; ต้องคุยเพื่อนครบก่อนจึงไปต่อ
 # Tone: Sitcom-light (กวน/ขำเล็กน้อย), CEFR-B1, ประโยคสั้น, ทำให้เห็นเป็นการกระทำ
 # =============================================
-
-label: ep03_start
-background: "computer_lab_day.png"
-music: "lab_ambient.ogg"
-sfx: "typing_soft.ogg"
-join: player at center
-join: classmate_a at left
-join: classmate_b at right
-join: classmate_c at far
-join: cs_teacher at podium
-
-# --- Scene 1: Intro (CS Teacher เกริ่น · lock movement) ---
-label: scene_intro
-update: player.can_move=false
-CS Teacher: สวัสดีครับ วันนี้เข้าเรื่อง **Cyber Security** แบบสั้นๆ แต่ใช้ได้จริง
-CS Teacher: เป้าหมายมี 3 ข้อ—(1) รหัสผ่านให้รอด (2) ฟิชชิงไม่หลอก (3) เน็ตสาธารณะใช้ให้เป็น
-Kai: (กระซิบ) ขออย่างเดียว…อย่าให้ “Alex1234” โผล่บนจออีกนะ (ชำเลือง)
-Alex: เบาได้เบา เดี๋ยวเสียฟอร์ม
-Mira: (ยิ้ม) ขอสูตรเช็กลิงก์แบบไว ๆ หน่อยค่ะ
-Henry: ฝั่งเทคนิคฝากผม https/ใบรับรองให้เองครับ
-CS Teacher: เยี่ยม เดี๋ยวเดโมสั้น ๆ แล้วไปลองเป็นทีม
-update: player.can_move=true
+Teacher: สวัสดีครับทุกคน วันนี้เราจะเข้าเรื่อง "Cyber Security" กันนะ ไม่ยากครับ แต่ได้ใช้จริงแน่นอน
+Teacher: วันนี้มี 3 เรื่องหลักที่อยากให้จำไว้ \
+(1) ตั้งรหัสผ่านให้ปลอดภัย\
+(2) อย่าหลงกลพวกฟิชชิง\
+(3) ใช้อินเทอร์เน็ตอย่างมีสติ
+Kai: ฮ่าๆ....ขออย่างเดียวเลยครับคุณครู... อย่าให้ใครตั้งรหัสว่า “Alex1234” อีกนะ เดี๋ยวระบบล่มทั้งห้อง!
+Alex: เอ้า! นายก็พูดเกินไปละ Kai รหัสฉันเปลี่ยนแล้วนะ ตอนนี้เป็น “Alex12345” แล้ว!
+Mira: ครูคะ ถ้ามีวิธีเช็กรหัสเร็ว ๆ บอกหน่อยได้ไหมคะ
+Henry: เรามีเทคนิคอยู่นะ ลองเข้าเว็บเช็กรหัสได้เลย “Password Strength Checker” รับรองใช้ได้จริง!
+Teacher: ดีมากทุกคน เดี๋ยวเปิดตัวอย่างสั้น ๆ ให้ดูนะครับ
 
 # --- Scene 2: Demo (CS Teacher สาธิต 3 เรื่อง) ---
-label: scene_demo
-sfx: "projector_on.ogg"
-CS Teacher: เดโม 1—รหัสผ่าน: ใช้ **passphrase** เปิด 2FA แล้วเก็บใน Password Manager
-CS Teacher: เดโม 2—ฟิชชิง: ชี้ลิงก์ดูโดเมน เช็กตัวสะกด และอย่ากดลิงก์จากเมลเร่งด่วน
-CS Teacher: เดโม 3—เครือข่าย: เลี่ยง Wi‑Fi ฟรีไม่เข้ารหัส ถ้าจำเป็นใช้ VPN + HTTPS‑only
-Kai: (พยักหน้า) แบบนี้จำง่าย ไม่ปวดหัว
-CS Teacher: โอเค ต่อไปไปลองกับเพื่อน—แต่ละคนมีมินิควิซของตัวเอง
-
-# --- Scene 2.5: Hub (ต้องคุยครบ Kai/Mira/Henry) ---
-label: hub
-if: state.peer_kai_done && state.peer_mira_done && state.peer_henry_done
-  jump: try_move_on
-else:
-  Alex: จะเริ่มกับใครก่อนดี?
-  choices:
-    - text: คุยกับ Kai (รหัสผ่าน/2FA/Password Manager)
-      jump: talk_kai
-    - text: คุยกับ Mira (ฟิชชิง/ลิงก์/โดเมน)
-      jump: talk_mira
-    - text: คุยกับ Henry (Wi‑Fi สาธารณะ/HTTPS/VPN)
-      jump: talk_henry
+Teacher: ตัวอย่างที่ 1 เรื่อง รหัสผ่าน\: จำไว้นะครับ ใช้ passphrase ที่เดายาก, เปิด 2FA, แล้วเก็บไว้ใน Password Manager เท่านั้น
+Teacher:  ตัวอย่างที่ 2 ฟิชชิง (Phishing)\: อย่าหลงคลิกลิงก์แปลก ๆ ตรวจดูโดเมนให้ดี และอย่าเชื่อข้อความที่เร่งร้อนเกินไป
+Teacher: และตัวอย่างที่ 3 เครือข่าย (Network)\: ระวัง Wi-Fi ฟรีที่ไม่มีรหัส ถ้าจำเป็นต้องใช้ ควรต่อผ่าน VPN และใช้เว็บที่มี HTTPS เท่านั้น
+Kai: โอเคครับ แบบนี้จำง่ายเลย ไม่ต้องปวดหัวด้วย
+Teacher: เยี่ยมมากครับทุกคน! ให้แต่ละคนมี มินิควิซ เป็นของตัวเอง พร้อมเริ่มได้เลยครับ
+Alex: เอาล่ะ... จะเริ่มกับใครก่อนดีนะ?
+Kai: สมมติรหัสผ่าน “Alex1234”… (ชำเลือง Alex) ล้อเล่นนะ ๆ เปลี่ยนยังไงให้แข็งแรงแต่จำได้?
+jump 
+- text: คุยกับ Kai (รหัสผ่าน/2FA/Password Manager)
+  jump 
+- text: คุยกับ Mira (ฟิชชิง/ลิงก์/โดเมน)
+  jump 
+- text: คุยกับ Henry (Wi‑Fi สาธารณะ/HTTPS/VPN)
+  jump 
 
 # --- Scene 3A: Apply with Kai (mini-quiz · กวนเบา ๆ) ---
-label: talk_kai
-sfx: "chair_slide.ogg"
-Kai: สมมติรหัสผ่าน “Alex1234”… (ชำเลือง Alex) ล้อเล่นนะ ๆ เปลี่ยนยังไงให้แข็งแรงแต่จำได้?
-choices:
-  - text: เติมเลขยาว ๆ เป็น “Alex123456789”
-    jump: kai_wrong_len
-  - text: เปลี่ยนเป็น passphrase + เปิด 2FA
-    jump: kai_right_pass
-  - text: ใช้คำเดิมแต่สลับพิมพ์ใหญ่เล็ก
-    jump: kai_wrong_case
-
-label: kai_wrong_len
+label Kaiquiz
+- text: เติมเลขยาว ๆ เป็น “Alex123456789”
+  jump 
+- text: เปลี่ยนเป็น passphrase + เปิด 2FA
+  jump 
+- text: ใช้คำเดิมแต่สลับพิมพ์ใหญ่เล็ก
+  jump 
 Kai: ยาวอย่างเดียว เดาง่ายอยู่ ระบบจับแพทเทิร์นได้
 Alex: โอเค ไม่พอจริง ๆ
-update: state.kai_q1=false
-jump: kai_next
-
-label: kai_wrong_case
+jump 
 Kai: แค่สลับพิมพ์ใหญ่เล็ก บอทก็เดาได้
 Alex: รับทราบ ต้องเปลี่ยนโครงสร้าง
-update: state.kai_q1=false
-jump: kai_next
-
-label: kai_right_pass
+jump 
 Kai: ใช่เลย! passphrase = จำง่าย เดายาก เปิด 2FA กันพลาดอีกชั้น
 Alex: ใช้ Password Manager ด้วย จะได้ไม่ลืม
-update: state.kai_q1=true
-jump: kai_next
-
-label: kai_next
+jump 
 Kai: โจทย์ต่อ—2FA ใช้อะไรดี?
-choices:
-  - text: อีเมลสะดวกสุด ใช้อันเดียว
-    jump: kai_wrong_2fa
-  - text: แอป Authenticator ถ้าเลือกได้
-    jump: kai_right_2fa
+choices: <Empty Text Event>
+- text: อีเมลสะดวกสุด ใช้อันเดียว
+  jump 
+- text: แอป Authenticator ถ้าเลือกได้
+  jump 
 
-label: kai_wrong_2fa
+label 
 Kai: อีเมลโดนที เกมโอเวอร์นะ
 Alex: ได้ งั้นใช้แอปแทน
-update: state.kai_q2=false
-jump: kai_wrap
+update  : state.kai_q2=false
+jump 
 
-label: kai_right_2fa
+label 
 Kai: แอปแน่นกว่า (ถ้าเลือกได้ ปิด SMS ด้วย)
 Alex: โอเค
-update: state.kai_q2=true
-jump: kai_wrap
+update  : state.kai_q2=true
+jump 
 
-label: kai_wrap
+label 
 Alex: สรุป Kai—passphrase + 2FA + Manager
-update: state.peer_kai_done=true
-jump: hub
+update  : state.peer_kai_done=true
+jump 
 
 # --- Scene 3B: Apply with Mira (mini-quiz · โซเชียลไวบ์) ---
-label: talk_mira
+label 
 sfx: "notification_ping.ogg"
 Mira: ได้ลิงก์ “แจกไอโฟนฟรี” จากเพื่อนของเพื่อนของคุณน้า…เชื่อดีไหมเนี่ย?
-choices:
-  - text: โลโก้แบรนด์ใหญ่มาเต็ม น่าเชื่อ
-    jump: mira_wrong_logo
-  - text: ชี้ลิงก์พรีวิวโดเมน ดูตัวสะกดให้ชัวร์
-    jump: mira_right_link
-  - text: แชร์เยอะ = น่าเชื่อ
-    jump: mira_wrong_pop
+choices: <Empty Text Event>
+- text: โลโก้แบรนด์ใหญ่มาเต็ม น่าเชื่อ
+  jump 
+- text: ชี้ลิงก์พรีวิวโดเมน ดูตัวสะกดให้ชัวร์
+  jump 
+- text: แชร์เยอะ = น่าเชื่อ
+  jump 
 
-label: mira_wrong_logo
+label 
 Mira: โลโก้แปะรูปไหนก็ได้ ดูโดเมนจริงดีกว่า
 Alex: เห็นด้วย
-update: state.mira_q1=false
-jump: mira_next
+update  : state.mira_q1=false
+jump 
 
-label: mira_wrong_pop
+label 
 Mira: แชร์เยอะ ≠ ชัวร์ ขอที่มาให้ตรวจด้วย
 Alex: รับทราบ
-update: state.mira_q1=false
-jump: mira_next
+update  : state.mira_q1=false
+jump 
 
-label: mira_right_link
+label 
 Mira: ใช่ ชี้ลิงก์ดูโดเมน ชื่อยำ ๆ/สะกดเพี้ยน = ธงแดง
 Alex: https สำคัญไหม
 Mira: สำคัญ แต่เว็บปลอมก็มี https ได้ ดูชื่อเว็บด้วยเสมอ
-update: state.mira_q1=true
-jump: mira_next
+update  : state.mira_q1=true
+jump 
 
-label: mira_next
+label 
 Mira: เมลเร่งด่วนขู่ล็อกบัญชี ทำไง?
-choices:
-  - text: กดลิงก์ในเมลทันที
-    jump: mira_wrong_urgency
-  - text: เปิดแอป/เว็บทางการเอง
-    jump: mira_right_site
+choices: <Empty Text Event>
+- text: กดลิงก์ในเมลทันที
+  jump 
+- text: เปิดแอป/เว็บทางการเอง
+  jump 
 
-label: mira_wrong_urgency
+label 
 Mira: นั่นหลุมชัด ๆ เข้าเว็บ/แอปทางการเองปลอดภัยสุด
 Alex: โอเค
-update: state.mira_q2=false
-jump: mira_wrap
+update  : state.mira_q2=false
+jump 
 
-label: mira_right_site
+label 
 Mira: ดีมาก เปิดเว็บ/แอปทางการเอง แล้วเช็กสถานะ
 Alex: รับทราบ
-update: state.mira_q2=true
-jump: mira_wrap
+update  : state.mira_q2=true
+jump 
 
-label: mira_wrap
+label 
 Alex: สรุป Mira—ดูโดเมนจริง https‑อย่างเดียวไม่พอ และเข้าเว็บเอง
-update: state.peer_mira_done=true
-jump: hub
+update  : state.peer_mira_done=true
+jump 
 
 # --- Scene 3C: Apply with Henry (mini-quiz · เนิร์ดอบอุ่น) ---
-label: talk_henry
+label 
 sfx: "wifi_scan.ogg"
 Henry: ร้านกาแฟมี Wi‑Fi ชื่อ “Cafe_Free” ต่อดีไหม?
-choices:
-  - text: ต่อเลย สบาย
-    jump: henry_wrong_open
-  - text: หลีกเลี่ยง หรือจำเป็นให้ใช้ VPN + HTTPS‑only
-    jump: henry_right_wifi
+choices: <Empty Text Event>
+- text: ต่อเลย สบาย
+  jump 
+- text: หลีกเลี่ยง หรือจำเป็นให้ใช้ VPN + HTTPS‑only
+  jump 
 
-label: henry_wrong_open
+label 
 Henry: เสี่ยงโดนดักนะ ถ้าจำเป็น เปิด VPN และเลี่ยงงานสำคัญ
 Alex: เข้าใจละ
-update: state.henry_q1=false
-jump: henry_next
+update  : state.henry_q1=false
+jump 
 
-label: henry_right_wifi
+label 
 Henry: ถูกต้อง แล้วปิดแชร์ไฟล์/AirDrop ด้วย
 Alex: ได้
-update: state.henry_q1=true
-jump: henry_next
+update  : state.henry_q1=true
+jump 
 
-label: henry_next
+label 
 Henry: เบราว์เซอร์เตือน “ใบรับรองไม่ปลอดภัย” ทำไง?
-choices:
-  - text: กดข้ามให้ไว ๆ
-    jump: henry_wrong_cert
-  - text: ถอยออก ไม่ใส่ข้อมูล และลองใหม่ผ่านเครือข่ายที่เชื่อถือได้
-    jump: henry_right_cert
+choices: <Empty Text Event>
+- text: กดข้ามให้ไว ๆ
+  jump 
+- text: ถอยออก ไม่ใส่ข้อมูล และลองใหม่ผ่านเครือข่ายที่เชื่อถือได้
+  jump 
 
-label: henry_wrong_cert
+label 
 Henry: อย่าข้ามเตือน อาจเป็นเว็บปลอม/โดนดักกลางทาง
 Alex: ไม่ฝืนเข้าแล้ว
-update: state.henry_q2=false
-jump: henry_wrap
+update  : state.henry_q2=false
+jump 
 
-label: henry_right_cert
+label 
 Henry: ดีมาก ปลอดภัยกว่าเยอะ
 Alex: รับทราบ
-update: state.henry_q2=true
-jump: henry_wrap
+update  : state.henry_q2=true
+jump 
 
-label: henry_wrap
+label 
 Alex: สรุป Henry—เลี่ยง Wi‑Fi ฟรี ใช้ VPN/HTTPS และอย่าข้ามใบรับรอง
-update: state.peer_henry_done=true
-jump: hub
+update  : state.peer_henry_done=true
+jump 
 
 # --- Scene 4: Quiz รวม (3 ข้อ) ---
-label: try_move_on
+label 
 Alex: คุยครบทุกคนแล้ว พร้อมทำแบบทดสอบรวมไหม?
-choices:
-  - text: พร้อม ไปต่อ
-    jump: scene_quiz
-  - text: ขอทบทวนอีกนิด กลับไป Hub
-    jump: hub
+choices: <Empty Text Event>
+- text: พร้อม ไปต่อ
+  jump 
+- text: ขอทบทวนอีกนิด กลับไป Hub
+  jump 
 
-label: scene_quiz
+label 
 music: "quiz_soft.ogg"
 sfx: "page_flip.ogg"
 Alex: มินิควิซ 3 ข้อ เช็กความเข้าใจเร็ว ๆ
 
 # Q1
 Alex: วิธีไหนเหมาะสุดสำหรับรหัสผ่าน?
-choices:
-  - text: สลับพิมพ์ใหญ่เล็กของคำเดิม
-    jump: q1_wrong_case
-  - text: ใช้ passphrase + เปิด 2FA
-    jump: q1_right_pass
-  - text: เพิ่มตัวเลขยาว ๆ ต่อท้าย
-    jump: q1_wrong_len
+choices: <Empty Text Event>
+- text: สลับพิมพ์ใหญ่เล็กของคำเดิม
+  jump 
+- text: ใช้ passphrase + เปิด 2FA
+  jump 
+- text: เพิ่มตัวเลขยาว ๆ ต่อท้าย
+  jump 
 
-label: q1_wrong_case
+label 
 Alex: เดาง่ายอยู่ เปลี่ยนเป็นวลีจะดีกว่า
-update: quiz.q1=false
-jump: quiz_router
+update  : quiz.q1=false
+jump 
 
-label: q1_wrong_len
+label 
 Alex: แค่ยาวยังเดาได้ ไม่รอด
-update: quiz.q1=false
-jump: quiz_router
+update  : quiz.q1=false
+jump 
 
-label: q1_right_pass
+label 
 Alex: ถูกต้อง passphrase + 2FA ช่วยได้มาก
-update: quiz.q1=true
-jump: quiz_router
+update  : quiz.q1=true
+jump 
 
-label: quiz_router
+label 
 if: not state.q2_started
-  update: state.q2_started=true
-  jump: q2
+update  : state.q2_started=true
+jump 
 else:
   if: not state.q3_started
-    jump: q3
-  else:
-    jump: quiz_score
+  jump 
+else:
+  jump 
 
 # Q2
-label: q2
+label 
 Alex: เมลเร่งด่วนให้กดลิงก์ยืนยันบัญชี ควรทำอย่างไร?
-choices:
-  - text: กดลิงก์ในเมลทันที
-    jump: q2_wrong_click
-  - text: เปิดแอป/เว็บทางการเอง
-    jump: q2_right_site
+choices: <Empty Text Event>
+- text: กดลิงก์ในเมลทันที
+  jump 
+- text: เปิดแอป/เว็บทางการเอง
+  jump 
 
-label: q2_wrong_click
+label 
 Alex: นั่นหลุมเลย เข้าเว็บเองดีกว่า
-update: quiz.q2=false
-jump: quiz_router
+update  : quiz.q2=false
+jump 
 
-label: q2_right_site
+label 
 Alex: เวิร์ก เข้าเว็บ/แอปทางการเองและตรวจสถานะ
-update: quiz.q2=true
-jump: quiz_router
+update  : quiz.q2=true
+jump 
 
 # Q3
-label: q3
+label 
 Alex: ใช้ Wi‑Fi สาธารณะอย่างไรให้ปลอดภัยขึ้น?
-choices:
-  - text: กดข้ามคำเตือนใบรับรองจะได้ไว ๆ
-    jump: q3_wrong_cert
-  - text: ใช้ VPN/HTTPS‑only และหลีกเลี่ยงธุรกรรมสำคัญ
-    jump: q3_right_wifi
+choices: <Empty Text Event>
+- text: กดข้ามคำเตือนใบรับรองจะได้ไว ๆ
+  jump 
+- text: ใช้ VPN/HTTPS‑only และหลีกเลี่ยงธุรกรรมสำคัญ
+  jump 
 
-label: q3_wrong_cert
+label 
 Alex: อย่าข้ามคำเตือน ควรถอยและเช็กก่อน
-update: quiz.q3=false
-jump: quiz_router
+update  : quiz.q3=false
+jump 
 
-label: q3_right_wifi
+label 
 Alex: ดีมาก ปลอดภัยกว่ามาก
-update: quiz.q3=true
-jump: quiz_router
+update  : quiz.q3=true
+jump 
 
 # สรุปคะแนน
-label: quiz_score
-update: state.quiz_correct=(quiz.q1?1:0)+(quiz.q2?1:0)+(quiz.q3?1:0)
+label 
+update  : state.quiz_correct=(quiz.q1?1:0)+(quiz.q2?1:0)+(quiz.q3?1:0)
 Alex: คะแนนของเธอคือ {{state.quiz_correct}} จาก 3
 if: state.quiz_correct >= 2
-  Alex: ผ่านเกณฑ์พื้นฐานของ Cyber Security แล้ว
+Alex: ผ่านเกณฑ์พื้นฐานของ Cyber Security แล้ว
 else:
   Alex: ยังไม่ผ่าน ลองทบทวนอีกครั้งนะ
 
 # --- Scene 5: Reflection & Pledge ---
-label: scene_reflection
+label 
 music: "reflect_warm.ogg"
 sfx: "keyboard_enter.ogg"
 Alex: ปิดท้ายหน่อย—พิมพ์คำมั่น 1 ข้อ ที่จะทำเรื่องความปลอดภัยไซเบอร์
-update: prompt.input="ฉันจะ... (เช่น เปิด 2FA/ เปลี่ยนเป็น passphrase/ เลี่ยง Wi‑Fi ฟรี)"
+update  : prompt.input="ฉันจะ... (เช่น เปิด 2FA/ เปลี่ยนเป็น passphrase/ เลี่ยง Wi‑Fi ฟรี)"
 Alex: (พิมพ์คำมั่นสัญญา)
-update: pledge.text={{input}}
-update: signal.pledge_committed(player_id, "security", pledge.text)
-CS Teacher: เยี่ยมครับ ทุกคนทำได้ดีมาก
+update  : pledge.text={{input}}
+update  : signal.pledge_committed(player_id, "security", pledge.text)
+CS Teacher\: เยี่ยมครับ ทุกคนทำได้ดีมาก
 end_timeline
