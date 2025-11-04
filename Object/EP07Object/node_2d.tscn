@@ -1,0 +1,152 @@
+[gd_scene load_steps=21 format=3 uid="uid://bdhmj6tbrxhcg"]
+
+[ext_resource type="Texture2D" uid="uid://bvdvv7hdj8peg" path="res://Tileset/Halloween Dec2/1 Objects/Pie4.png" id="1_6oi8q"]
+[ext_resource type="Texture2D" uid="uid://x7uii8r7f6ed" path="res://Tileset/Halloween Dec2/1 Objects/Pie2.png" id="2_o4mb8"]
+[ext_resource type="Texture2D" uid="uid://ccdia4lhooj18" path="res://Tileset/Halloween Dec2/1 Objects/Pie3.png" id="3_4sdqm"]
+[ext_resource type="Texture2D" uid="uid://cx2bjoev1a66i" path="res://Tileset/Halloween Dec2/1 Objects/Pie1.png" id="4_ae8e3"]
+[ext_resource type="Texture2D" uid="uid://bcavoawf8qart" path="res://Tileset/Halloween Dec2/1 Objects/Punch1.png" id="5_6lhr4"]
+[ext_resource type="Texture2D" uid="uid://clhmbcqsgd861" path="res://Tileset/Halloween Dec2/1 Objects/Punch2.png" id="6_qlqfe"]
+[ext_resource type="Texture2D" uid="uid://by6myycbqa0xr" path="res://Tileset/Halloween Dec2/1 Objects/Punch3.png" id="7_kby73"]
+[ext_resource type="Texture2D" uid="uid://dthre74htaq0o" path="res://Tileset/2 Decoration/18.png" id="8_xsymw"]
+[ext_resource type="Texture2D" uid="uid://cdyh6cd1a0a23" path="res://Tileset/Halloween Decoration/2 Objects/Candel1.png" id="9_27ppk"]
+[ext_resource type="Texture2D" uid="uid://din0ji4k6n656" path="res://Tileset/Halloween Decoration/2 Objects/Candel2.png" id="10_udf30"]
+[ext_resource type="Texture2D" uid="uid://cksq20mwn3o32" path="res://Tileset/Halloween Decoration/2 Objects/Candel3.png" id="11_b42il"]
+[ext_resource type="Texture2D" uid="uid://fa8kh6colp2b" path="res://Tileset/Halloween Decoration/2 Objects/Candel4.png" id="12_d0khh"]
+[ext_resource type="Texture2D" uid="uid://i7pyffhkml0g" path="res://Tileset/Halloween Decoration/2 Objects/Candel5.png" id="13_wxlq0"]
+[ext_resource type="Texture2D" uid="uid://cyf3o7ss7a2nk" path="res://Tileset/Halloween Decoration/2 Objects/Candel6.png" id="14_p4spv"]
+[ext_resource type="Texture2D" uid="uid://cyypspuuygyey" path="res://Tileset/Halloween Dec2/1 Objects/Cocktail1.png" id="15_3lakf"]
+[ext_resource type="Texture2D" uid="uid://7q0dctnjs2vf" path="res://Tileset/Halloween Dec2/1 Objects/Cocktail3.png" id="16_nh5fi"]
+[ext_resource type="Texture2D" uid="uid://b58wauh6tpopk" path="res://Tileset/Halloween Dec2/1 Objects/Cocktail4.png" id="17_7ayar"]
+[ext_resource type="Texture2D" uid="uid://daycsv1qqtu41" path="res://Tileset/Halloween Dec2/1 Objects/Cake7.png" id="18_65ujk"]
+[ext_resource type="Texture2D" uid="uid://wm6e2tuvjnjb" path="res://Tileset/Halloween Dec2/1 Objects/Cake8.png" id="19_70vxi"]
+[ext_resource type="Texture2D" uid="uid://bk1nv661jm5w6" path="res://Tileset/Halloween Dec2/1 Objects/Cake5.png" id="20_5bq5d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Pie4" type="Sprite2D" parent="."]
+position = Vector2(655, 471.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("1_6oi8q")
+
+[node name="Pie2" type="Sprite2D" parent="."]
+position = Vector2(700.5, 490.5)
+scale = Vector2(3, 3)
+texture = ExtResource("2_o4mb8")
+
+[node name="Pie3" type="Sprite2D" parent="."]
+position = Vector2(683, 475)
+scale = Vector2(3, 3)
+texture = ExtResource("3_4sdqm")
+
+[node name="Pie1" type="Sprite2D" parent="."]
+position = Vector2(670, 473)
+scale = Vector2(3, 3)
+texture = ExtResource("4_ae8e3")
+
+[node name="Punch1" type="Sprite2D" parent="."]
+position = Vector2(943, 476)
+scale = Vector2(3, 3)
+texture = ExtResource("5_6lhr4")
+
+[node name="Punch2" type="Sprite2D" parent="."]
+position = Vector2(934.00006, 474)
+scale = Vector2(3, 3)
+texture = ExtResource("6_qlqfe")
+
+[node name="Punch3" type="Sprite2D" parent="."]
+position = Vector2(911.00006, 472.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("7_kby73")
+
+[node name="18" type="Sprite2D" parent="."]
+modulate = Color(0.43939242, 0.2615976, 0.2615176, 1)
+position = Vector2(788, 506.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("8_xsymw")
+
+[node name="19" type="Sprite2D" parent="."]
+modulate = Color(0.43939242, 0.2615976, 0.2615176, 1)
+position = Vector2(648, 507.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("8_xsymw")
+
+[node name="20" type="Sprite2D" parent="."]
+modulate = Color(0.43939242, 0.2615976, 0.2615176, 1)
+position = Vector2(942.00006, 509)
+scale = Vector2(3, 3)
+texture = ExtResource("8_xsymw")
+
+[node name="Candel1" type="Sprite2D" parent="."]
+position = Vector2(710, 466.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("9_27ppk")
+
+[node name="Candel7" type="Sprite2D" parent="."]
+position = Vector2(729, 468)
+scale = Vector2(3, 3)
+texture = ExtResource("9_27ppk")
+
+[node name="Candel2" type="Sprite2D" parent="."]
+position = Vector2(852, 475)
+scale = Vector2(3, 3)
+texture = ExtResource("10_udf30")
+
+[node name="Candel9" type="Sprite2D" parent="."]
+position = Vector2(598, 476)
+scale = Vector2(3, 3)
+texture = ExtResource("10_udf30")
+
+[node name="Candel3" type="Sprite2D" parent="."]
+position = Vector2(838, 468.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("11_b42il")
+
+[node name="Candel4" type="Sprite2D" parent="."]
+position = Vector2(746, 475)
+scale = Vector2(3, 3)
+texture = ExtResource("12_d0khh")
+
+[node name="Candel8" type="Sprite2D" parent="."]
+position = Vector2(585, 476)
+scale = Vector2(3, 3)
+texture = ExtResource("12_d0khh")
+
+[node name="Candel5" type="Sprite2D" parent="."]
+position = Vector2(879, 473)
+scale = Vector2(3, 3)
+texture = ExtResource("13_wxlq0")
+
+[node name="Candel6" type="Sprite2D" parent="."]
+position = Vector2(998, 474)
+scale = Vector2(3, 3)
+texture = ExtResource("14_p4spv")
+
+[node name="Cocktail1" type="Sprite2D" parent="."]
+position = Vector2(964.00006, 469)
+scale = Vector2(3, 3)
+texture = ExtResource("15_3lakf")
+
+[node name="Cocktail3" type="Sprite2D" parent="."]
+position = Vector2(956, 471)
+scale = Vector2(3, 3)
+texture = ExtResource("16_nh5fi")
+
+[node name="Cocktail4" type="Sprite2D" parent="."]
+position = Vector2(978.00006, 473)
+scale = Vector2(3, 3)
+texture = ExtResource("17_7ayar")
+
+[node name="Cake7" type="Sprite2D" parent="."]
+position = Vector2(634, 475.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("18_65ujk")
+
+[node name="Cake8" type="Sprite2D" parent="."]
+position = Vector2(623, 474)
+scale = Vector2(3, 3)
+texture = ExtResource("19_70vxi")
+
+[node name="Cake5" type="Sprite2D" parent="."]
+position = Vector2(613, 476)
+scale = Vector2(3, 3)
+texture = ExtResource("20_5bq5d")

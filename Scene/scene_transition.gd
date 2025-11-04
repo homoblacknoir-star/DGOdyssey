@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+const Scene1 = ("res://Scene/Scene1.tscn")
 const Ep01 = ("res://Scene/EP01.tscn")
 const Ep02 = ("res://Scene/EP02.tscn")
 const Ep03 = ("res://Scene/EP03.tscn")

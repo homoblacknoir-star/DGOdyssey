@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DGOdyssey_kom (Copy)"
-run/main_scene="uid://b4jtp6lok6w5s"
+run/main_scene="uid://cjfike4qd76n6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]
@@ -48,6 +48,8 @@ directories/dtl_directory={
 "EP04_Privacy_Sitcom_MIN5": "res://Dialog/Timeline/EP04/EP04_Privacy_Sitcom_MIN5.dtl",
 "EP05_Security_Sitcom_MIN5": "res://Dialog/Timeline/EP05/EP05_Security_Sitcom_MIN5.dtl",
 "EP06_PublicPark_Sitcom_MIN5": "res://Dialog/Timeline/EP06/EP06_PublicPark_Sitcom_MIN5.dtl",
+"EP07_Halloween_Sitcom_MIN5": "res://Dialog/Timeline/EP07/EP07_Halloween_Sitcom_MIN5.dtl",
+"EP08_Between_Two_Worlds": "res://Dialog/Timeline/EP08/EP08_Between_Two_Worlds.dtl",
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",

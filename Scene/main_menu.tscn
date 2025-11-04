@@ -1,132 +1,24 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4jtp6lok6w5s"]
+[gd_scene load_steps=4 format=3 uid="uid://cjfike4qd76n6"]
 
-[ext_resource type="FontFile" uid="uid://c7bjmwdyq43oo" path="res://Font/BoldPixels.otf" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://dp3kijp0ry2jg" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="2_hii65"]
+[ext_resource type="Script" uid="uid://ci2ix68a5frvq" path="res://Scene/main_menu.gd" id="1_87ipw"]
+[ext_resource type="Texture2D" uid="uid://c2xbv7sk2yks1" path="res://Background/City_in_different_time/ClearSky/7.png" id="2_hii65"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_hii65"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqsxi"]
+[node name="Main_Menu" type="Node2D"]
+script = ExtResource("1_87ipw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.6955032, 0.6955031, 0.6955031, 1)
+offset_right = 1149.0
+offset_bottom = 644.0
 texture = ExtResource("2_hii65")
-modulate_color = Color(0.78775924, 0.78775924, 0.78775924, 1)
+expand_mode = 1
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06t4h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
-
-[node name="MainMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -2.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_fu7sn")
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_kqsxi")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -174.5
-offset_top = -35.0
-offset_right = 174.5
-offset_bottom = 339.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="Start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-theme_override_colors/font_pressed_color = Color(0.021321826, 0.2973246, 0.58306664, 1)
-theme_override_colors/font_hover_color = Color(0.074556954, 0.45448238, 0.8602765, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxEmpty_06t4h")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fu7sn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_jix8l")
-text = "START"
-
-[node name="Exit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-theme_override_colors/font_pressed_color = Color(0.021321826, 0.2973246, 0.58306664, 1)
-theme_override_colors/font_hover_color = Color(0.074556954, 0.45448238, 0.8602765, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxEmpty_06t4h")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fu7sn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_jix8l")
-text = "EXIT
-"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -299.0
-offset_right = 348.0
-offset_bottom = 323.0
-grow_horizontal = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.074556954, 0.45448238, 0.8602765, 1)
-theme_override_colors/font_shadow_color = Color(0.44705883, 0.03529412, 0.7176471, 1)
-theme_override_colors/font_outline_color = Color(0.96862745, 0.14509805, 0.52156866, 1)
-theme_override_constants/outline_size = 15
-theme_override_constants/shadow_outline_size = 30
-theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 170
-theme_override_styles/normal = SubResource("StyleBoxTexture_jix8l")
-text = "Cyber"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 0.93333334, 0.69803923, 1)
-theme_override_colors/font_shadow_color = Color(0.48897398, 0.0468368, 0.7816966, 1)
-theme_override_colors/font_outline_color = Color(0.101960786, 0, 0.38039216, 1)
-theme_override_constants/outline_size = 15
-theme_override_constants/shadow_outline_size = 30
-theme_override_fonts/font = ExtResource("1_06t4h")
-theme_override_font_sizes/font_size = 170
-theme_override_styles/normal = SubResource("StyleBoxTexture_jix8l")
-text = "Quest"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 76.0
+offset_right = 880.0
+offset_bottom = 244.0
+theme_override_fonts/font = ExtResource("3_hii65")
+theme_override_font_sizes/font_size = 160
+text = "Digiday"

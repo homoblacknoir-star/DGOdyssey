@@ -1533,7 +1533,7 @@ position = Vector2(374, 496)
 scale = Vector2(2, 2)
 
 [node name="EP01Door" parent="." instance=ExtResource("18_fnpbc")]
-position = Vector2(1051, 518)
+position = Vector2(1013, 517)
 scale = Vector2(3, 3)
 
 [node name="Ground" type="TileMapLayer" parent="."]

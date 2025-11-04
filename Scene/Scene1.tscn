@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dv6si8v2hoffr" path="res://Tileset/w.png" id="19_kr2un"]
 [ext_resource type="PackedScene" uid="uid://bwaqxopoi3y2x" path="res://Scene/SCENS/main_character.tscn" id="26_c1u51"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kr2un"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kiqwr"]
 texture = ExtResource("8_bhfib")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -333,9 +333,9 @@ texture = ExtResource("8_bhfib")
 
 [sub_resource type="TileSet" id="TileSet_f51dq"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_kr2un")
+sources/0 = SubResource("TileSetAtlasSource_kiqwr")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0vgb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwscw"]
 texture = ExtResource("17_kiqwr")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -629,7 +629,7 @@ texture = ExtResource("17_kiqwr")
 1:14/0 = 0
 2:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xfvx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kr2un"]
 texture = ExtResource("8_bhfib")
 0:0/0 = 0
 1:0/0 = 0
@@ -927,7 +927,7 @@ texture = ExtResource("8_bhfib")
 16:17/0 = 0
 17:17/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsoqs"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0vgb"]
 texture = ExtResource("18_fwscw")
 0:0/0 = 0
 1:0/0 = 0
@@ -1238,7 +1238,7 @@ texture = ExtResource("18_fwscw")
 9:3/0 = 0
 9:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d215g"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xfvx"]
 texture = ExtResource("19_kr2un")
 0:0/0 = 0
 0:1/0 = 0
@@ -2120,10 +2120,10 @@ texture = ExtResource("19_kr2un")
 
 [sub_resource type="TileSet" id="TileSet_c1u51"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_q0vgb")
-sources/1 = SubResource("TileSetAtlasSource_4xfvx")
-sources/2 = SubResource("TileSetAtlasSource_hsoqs")
-sources/3 = SubResource("TileSetAtlasSource_d215g")
+sources/0 = SubResource("TileSetAtlasSource_fwscw")
+sources/1 = SubResource("TileSetAtlasSource_kr2un")
+sources/2 = SubResource("TileSetAtlasSource_q0vgb")
+sources/3 = SubResource("TileSetAtlasSource_4xfvx")
 
 [node name="Scene1" type="Node2D"]
 script = ExtResource("1_x74ip")
