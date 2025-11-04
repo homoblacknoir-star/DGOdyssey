@@ -34,6 +34,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
+"BYEBYEBYE": "res://Dialog/Timeline/EndScene/BYEBYEBYE.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
 "EP01_ending": "res://Dialog/test/EP01_ending.dtl",

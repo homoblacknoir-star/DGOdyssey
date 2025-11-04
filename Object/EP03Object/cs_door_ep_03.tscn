@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_pxl6f"]
 [ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_4jrjd"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu1ol"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r88o5"]
 texture = ExtResource("2_pxl6f")
 0:0/0 = 0
 1:0/0 = 0
@@ -292,7 +292,7 @@ texture = ExtResource("2_pxl6f")
 2:14/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cvvgw"]
-sources/0 = SubResource("TileSetAtlasSource_vu1ol")
+sources/0 = SubResource("TileSetAtlasSource_r88o5")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjhx0"]
 size = Vector2(48, 74)

@@ -37,7 +37,13 @@ texture = ExtResource("2_hv2ns")
 
 [node name="12" type="Sprite2D" parent="."]
 modulate = Color(0.7539839, 0.75398386, 0.75398386, 1)
-position = Vector2(851.00006, 296)
+position = Vector2(878, 295)
+scale = Vector2(3, 3)
+texture = ExtResource("3_tsi4g")
+
+[node name="13" type="Sprite2D" parent="."]
+modulate = Color(0.7539839, 0.75398386, 0.75398386, 1)
+position = Vector2(695, 297)
 scale = Vector2(3, 3)
 texture = ExtResource("3_tsi4g")
 
