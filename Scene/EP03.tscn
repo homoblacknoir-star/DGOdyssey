@@ -2379,7 +2379,7 @@ position = Vector2(403.00003, 388.00003)
 scale = Vector2(2.5, 2.5)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_rvetj")]
-position = Vector2(188, 443)
+position = Vector2(204, 443)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-2.2222223, -103.333374)

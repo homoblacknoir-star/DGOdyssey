@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8o5nrb1uv1mg"]
+
+[ext_resource type="Texture2D" uid="uid://d080a3iv8u07r" path="res://Tileset/2 Billboard/128x64.png" id="1_2xwvc"]
+[ext_resource type="Script" uid="uid://dk232efo3ny86" path="res://Object/EndSceneObject/komputer_in_end_scene.gd" id="1_qyaci"]
+[ext_resource type="Texture2D" uid="uid://eloh85nuvsor" path="res://Tileset/AlexPcScreen.png" id="2_5dpvr"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_5dpvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyaci"]
+size = Vector2(90, 61.25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byiby"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="KomputerInEndScene" type="Area2D"]
+script = ExtResource("1_qyaci")
+
+[node name="128x64" type="Sprite2D" parent="."]
+self_modulate = Color(0.80049086, 0.80049074, 0.80049074, 1)
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.5, 0.528)
+texture = ExtResource("1_2xwvc")
+
+[node name="AlexPcScreen" type="Sprite2D" parent="."]
+position = Vector2(0.06250155, -1)
+scale = Vector2(0.04435763, 0.037499998)
+texture = ExtResource("2_5dpvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 3.375)
+shape = SubResource("RectangleShape2D_qyaci")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -46.0
+offset_top = -42.0
+offset_right = 47.0
+offset_bottom = -27.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_5dpvr")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_byiby")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

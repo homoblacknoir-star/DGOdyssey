@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://iwlpf4jn1ca"]
+[gd_scene load_steps=19 format=4 uid="uid://iwlpf4jn1ca"]
 
 [ext_resource type="Texture2D" uid="uid://c1wn1b6t6ly38" path="res://Background/City_in_different_time/PurpleCloud/8.png" id="1_6sndd"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_s057g"]
@@ -6,11 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bucrfyr5dlekf" path="res://Tileset/buildings/building_02.png" id="4_dli56"]
 [ext_resource type="Texture2D" uid="uid://drwdbcum0vior" path="res://Tileset/Tileset.png" id="4_itxb1"]
 [ext_resource type="Texture2D" uid="uid://bwmy2hvb01rpd" path="res://Tileset/buildings/building_03.png" id="5_6sndd"]
-[ext_resource type="Texture2D" uid="uid://blqvu481btki" path="res://Tileset/2 Billboard/128x64_2.png" id="5_cxs2n"]
 [ext_resource type="Texture2D" uid="uid://dmlif0lj1sab5" path="res://Tileset/buildings/building_04.png" id="5_ea5ki"]
-[ext_resource type="Texture2D" uid="uid://f2e5tm7fblsm" path="res://Tileset/1 Ad/128x64/7.png" id="6_itxb1"]
-[ext_resource type="Texture2D" uid="uid://dlvkhe2fmsonw" path="res://Tileset/2 Billboard/Pillar.png" id="7_apwey"]
-[ext_resource type="Texture2D" uid="uid://c3prwapn3l1rt" path="res://Tileset/2 Billboard/Pillar2.png" id="8_l75rk"]
 [ext_resource type="Texture2D" uid="uid://doee46liy8v2w" path="res://Tileset/2 Billboard/22x40_2.png" id="10_s1jfw"]
 [ext_resource type="Texture2D" uid="uid://dk2mjrw2yyglc" path="res://Tileset/1 Ad/22x40/1.png" id="11_cw5ue"]
 [ext_resource type="Texture2D" uid="uid://bu7pffwlit7pk" path="res://Tileset/SuanDec/3 Objects/Fence/6.png" id="13_s1jfw"]
@@ -903,7 +899,7 @@ tile_set = SubResource("TileSet_hpthd")
 
 [node name="Building03" type="Sprite2D" parent="Elements"]
 self_modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
-position = Vector2(336, 88.000015)
+position = Vector2(295, 86)
 scale = Vector2(5.5, 5.5)
 texture = ExtResource("5_6sndd")
 
@@ -914,30 +910,6 @@ position = Vector2(908, 238)
 scale = Vector2(4, 4)
 texture = ExtResource("4_dli56")
 flip_h = true
-
-[node name="Pillar" type="Sprite2D" parent="Elements"]
-self_modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
-position = Vector2(200, 252)
-scale = Vector2(3, 3)
-texture = ExtResource("7_apwey")
-
-[node name="Pillar3" type="Sprite2D" parent="Elements"]
-modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
-position = Vector2(200.00002, 348)
-scale = Vector2(3, 3)
-texture = ExtResource("7_apwey")
-
-[node name="Pillar4" type="Sprite2D" parent="Elements"]
-modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
-position = Vector2(200, 437)
-scale = Vector2(3, 3)
-texture = ExtResource("7_apwey")
-
-[node name="Pillar2" type="Sprite2D" parent="Elements"]
-modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
-position = Vector2(200, 480)
-scale = Vector2(3, 3)
-texture = ExtResource("8_l75rk")
 
 [node name="Building04" type="Sprite2D" parent="Elements"]
 self_modulate = Color(0.7835248, 0.7835229, 0.7835233, 1)
@@ -959,18 +931,6 @@ self_modulate = Color(0.7792914, 0.7792914, 0.7792913, 1)
 position = Vector2(626, 449.00003)
 scale = Vector2(3, 3)
 texture = ExtResource("11_cw5ue")
-
-[node name="128x642" type="Sprite2D" parent="Elements"]
-self_modulate = Color(0.74138474, 0.7413847, 0.74138457, 1)
-position = Vector2(200, 47)
-scale = Vector2(3, 3)
-texture = ExtResource("5_cxs2n")
-
-[node name="7" type="Sprite2D" parent="Elements"]
-modulate = Color(0.7539839, 0.75398386, 0.75398386, 1)
-position = Vector2(200.00002, 15)
-scale = Vector2(3, 3)
-texture = ExtResource("6_itxb1")
 
 [node name="6" type="Sprite2D" parent="Elements"]
 position = Vector2(1093, 436.99997)

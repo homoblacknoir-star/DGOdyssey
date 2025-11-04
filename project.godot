@@ -27,13 +27,13 @@ directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
 "Henry": "res://Dialog/Character/Henry.dch",
 "Kai": "res://Dialog/Character/Kai.dch",
+"Kom-puter": "res://Character/Kom-puter.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
 "Teacher": "res://Dialog/Character/Teacher.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
-"Dialog/timeline": "res://Dialog/timeline.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
 "EP01_ending": "res://Dialog/test/EP01_ending.dtl",
@@ -44,13 +44,15 @@ directories/dtl_directory={
 "EP01_quiz": "res://Dialog/test/EP01_quiz.dtl",
 "EP01_reflection": "res://Dialog/test/EP01_reflection.dtl",
 "EP01_teacher_redirect": "res://Dialog/test/EP01_teacher_redirect.dtl",
+"EP03_security": "res://Dialog/Timeline/EP03/EP03_security.dtl",
+"EP04_Privacy_Sitcom_MIN5": "res://Dialog/Timeline/EP04/EP04_Privacy_Sitcom_MIN5.dtl",
+"EP05_Security_Sitcom_MIN5": "res://Dialog/Timeline/EP05/EP05_Security_Sitcom_MIN5.dtl",
+"EP06_PublicPark_Sitcom_MIN5": "res://Dialog/Timeline/EP06/EP06_PublicPark_Sitcom_MIN5.dtl",
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
 "TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
-"Timeline/AtWindow": "res://Dialog/Timeline/AtWindow.dtl",
-"Timeline/timeline": "res://Dialog/Timeline/timeline.dtl",
 "friends": "res://Dialog/Timeline/EP02/friends.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }

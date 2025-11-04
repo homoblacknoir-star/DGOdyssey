@@ -1,0 +1,94 @@
+# EP04: After School (Thai Sitcom) — Characters: Alex, Kai, Mira, Bob, Rob only
+
+label: ep04_hook
+music: "evening_walk.ogg"
+sfx: "school_bell.ogg"
+line: Kai: เลิกเรียนสักที ไปงานฮาโลวีนกันปะ แสงไฟส้มสวยดีนะ
+line: Mira: เดินช้า ๆ หน่อยนะ เดี๋ยวคนชน อย่าถ่ายคนมั่ว ๆ ด้วย
+line: Alex: เห็นด้วย เดี๋ยวถามก่อนค่อยถ่าย ไม่อยากให้ใครอึดอัด
+line: Bob: ทางนี้ ๆ หมวกน้ำเงินมาแล้วจ้า อย่าจำผิดเป็นหมวกส้มล่ะ
+line: Rob: ขอบคุณที่เตือน ทุกปีคนชอบสลับพวกเราแล้วหาว่าทำเรื่องแปลก
+jump: ep04_hub
+
+label: ep04_hub
+line: Alex: โอเค แยกหน้าที่กันดีไหม เดี๋ยวรวมกันตรงนี้อีกรอบ
+choices:
+  - text: คุยกับ Kai เรื่องตั้งค่าโพสต์ให้ปลอดภัย
+    line: Alex: ไปถาม Kai ก่อน เรื่องตั้งค่ามือถือให้รัดกุม
+    jump: ep04_kai
+  - text: คุยกับ Mira เรื่องมารยาทขออนุญาตก่อนถ่าย
+    line: Alex: ไปคุยกับ Mira เรื่องพูดยังไงให้สุภาพ
+    jump: ep04_mira
+  - text: คุยกับ Bob & Rob กันสับสนและกันโดนกล่าวหา
+    line: Alex: ไปหาแฝดก่อน เดี๋ยวคนจำผิดแล้วมีดราม่า
+    jump: ep04_twins
+
+label: ep04_kai
+join: Kai
+sfx: "ui_pop.ogg"
+line: Kai: อย่างแรก ปิดแชร์ตำแหน่งอัตโนมัติ เวลาลงรูปจะได้ไม่หลุดที่อยู่
+line: Alex: โอเค ปิดแล้ว โล่งใจขึ้นเยอะเลย ขอบใจมาก
+line: Kai: อย่างที่สอง ตั้งเตือนก่อนโพสต์ มือจะได้หยุดคิดหนึ่งจังหวะ
+choices:
+  - text: ตั้งเตือนก่อนโพสต์ทุกครั้ง
+    update: state.kai_alert=true
+    sfx: "notification_ping.ogg"
+    line: Alex: ตั้งเรียบร้อย มือถือจะถามก่อนลงรูปทุกครั้ง
+    line: Kai: เนียน ๆ เหมือนมีครูจิ๋วในมือถือ แต่ไม่ดุ (หัวเราะ)
+    jump: ep04_hub
+  - text: พอแค่นี้ กลับไปรวมกลุ่ม
+    line: Alex: ได้ไอเดียพอแล้ว เดี๋ยวกลับไปบอกเพื่อน
+    line: Kai: โอเค เดี๋ยวตามไปที่เดิม
+    jump: ep04_hub
+
+label: ep04_mira
+join: Mira
+sfx: "soft_bell.ogg"
+line: Mira: เวลาจะถ่าย ลองพูดง่าย ๆ “ขออนุญาตถ่ายไว้ลงกลุ่มได้ไหมคะ”
+line: Alex: ถ้าอีกฝ่ายไม่สะดวก เราควรตอบยังไงดี
+line: Mira: ยิ้ม แล้วบอก “ไม่เป็นไรครับ ขอบคุณมากค่ะ” แค่นี้ก็จบสวย
+choices:
+  - text: ฝึกพูดประโยคสุภาพตาม Mira
+    update: state.mira_practice=true
+    sfx: "success_chime.ogg"
+    line: Alex: ขออนุญาตถ่ายไว้ลงกลุ่มได้ไหมครับ
+    line: Mira: เยี่ยมมาก เสียงอย่างนี้ คนฟังสบายใจ
+    jump: ep04_hub
+  - text: พอแค่นี้ กลับไปรวมกลุ่ม
+    line: Alex: โอเค ได้สคริปต์สุภาพแล้ว กลับไปบอกเพื่อน
+    line: Mira: ไปเลย เดี๋ยวตามไป
+    jump: ep04_hub
+
+label: ep04_twins
+join: Bob
+sfx: "whoosh.ogg"
+line: Bob: ย้ำอีกที ผม Bob หมวกน้ำเงิน ส่วน Rob หมวกส้ม เคลียร์นะ
+line: Rob: ถ้าเล่าเรื่อง ขอให้บอกสีหมวกด้วย จะได้ไม่กล่าวหาคนผิด
+line: Alex: เออ ดี เดี๋ยวเวลาพูดถึง จะระบุสีหมวกทุกครั้ง
+choices:
+  - text: แปะสติ๊กเกอร์ชื่อกันพลาด
+    update: state.twins_tag=true
+    sfx: "sticker.ogg"
+    line: Bob: เอาดิ ผมวาดหนวดใหญ่ ๆ ให้ด้วย จะได้จำง่าย
+    line: Rob: เขียนชื่อให้ถูกด้วยนะ พี่ไม่ได้ชื่อ “บ้อบ” (ยิ้ม)
+    jump: ep04_hub
+  - text: ใช้สีหมวกเป็นตัวอ้างอิง
+    update: state.twins_colorref=true
+    line: Alex: ต่อไปจะพูดว่า “Bob หมวกน้ำเงิน Rob หมวกส้ม” ตลอด
+    line: Bob: เคลียร์! ปีนี้ไม่อยากมีดราม่าผิดตัวแล้ว (หัวเราะ)
+    jump: ep04_hub
+
+label: ep04_recap
+sfx: "crowd_ambient.ogg"
+line: Kai: สรุปนะ เราปิดแชร์ตำแหน่ง ตั้งเตือนก่อนโพสต์ กันพลาดตอนเผลอ
+line: Mira: เวลาอยากถ่าย ก็บอกก่อน ถ้าเขาไม่สะดวกก็ถอยยิ้ม ๆ
+line: Bob: ฝั่งเรา แปะชื่อ หรือเรียกด้วยสีหมวก กันคนจำสลับ
+line: Rob: ฟังดูง่าย แต่ช่วยเลี่ยงปัญหาใหญ่ได้เยอะเลย
+line: Alex: งั้นผมขอให้คำมั่น “ขออนุญาตก่อนถ่าย เคารพสิทธิ์ และพูดถึงแฝดด้วยสีหมวก”
+call: "/root/dialogic_bridge.apply_update" args: ["state.pledge_committed", true]
+sfx: "crowd_applause_light.ogg"
+line: Kai: โอเค ลุยงานฮาโลวีนกัน พรุ่งนี้มีเรื่องเล่าดี ๆ แน่
+line: Mira: ไปสิ เดี๋ยวถ่ายรูปบรรยากาศ แต่ขออนุญาตก่อนนะ
+line: Bob: หมวกน้ำเงินพร้อม
+line: Rob: หมวกส้มพร้อม
+line: Alex: ทีมพร้อม ไป!

@@ -1,8 +1,10 @@
-[gd_scene load_steps=32 format=4 uid="uid://cajwtg8sdqewj"]
+[gd_scene load_steps=34 format=4 uid="uid://cajwtg8sdqewj"]
 
 [ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="1_340vs"]
+[ext_resource type="Texture2D" uid="uid://bph6cmvdollmo" path="res://Tileset/SuanDec/2 Background/Day/5.png" id="2_7ujt5"]
 [ext_resource type="Texture2D" uid="uid://cs836nurrgejv" path="res://Tileset/Tileset_Sheet/Swamp.png" id="2_or61o"]
 [ext_resource type="Texture2D" uid="uid://dv3kpjmjgs03c" path="res://Tileset/SuanDec/1 Tiles/Tile_01.png" id="3_7ujt5"]
+[ext_resource type="Texture2D" uid="uid://bn1urdrg0bfnf" path="res://Tileset/SuanDec/2 Background/Night/5.png" id="3_melp2"]
 [ext_resource type="Texture2D" uid="uid://bh85wbu1fj4hp" path="res://Tileset/SuanDec/1 Tiles/Tile_02.png" id="4_melp2"]
 [ext_resource type="Texture2D" uid="uid://kkpw2brbwgsy" path="res://Tileset/SuanDec/1 Tiles/Tile_03.png" id="5_whp18"]
 [ext_resource type="Texture2D" uid="uid://dc45ty6khih5t" path="res://Tileset/SuanDec/1 Tiles/Tile_24.png" id="6_axqiv"]
@@ -827,10 +829,22 @@ sources/6 = SubResource("TileSetAtlasSource_e354i")
 [node name="EP06" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1150.0
-offset_bottom = 646.0
+offset_left = 5.0
+offset_top = -117.0
+offset_right = 1155.0
+offset_bottom = 529.0
 texture = ExtResource("1_340vs")
 expand_mode = 1
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(581, 203)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7ujt5")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(576, 207)
+scale = Vector2(2, 2)
+texture = ExtResource("3_melp2")
 
 [node name="ground" type="TileMapLayer" parent="."]
 self_modulate = Color(0.74558026, 0.7455802, 0.7455802, 1)
