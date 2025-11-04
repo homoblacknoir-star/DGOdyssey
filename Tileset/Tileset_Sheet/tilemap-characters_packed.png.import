@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0n0vi436owu4"
-path="res://.godot/imported/1.png-03e8f1f2f20da24e364e0756f4c110e6.ctex"
+uid="uid://d36bnrwidcho7"
+path="res://.godot/imported/tilemap-characters_packed.png-3b017a96f302d4cfc1747146db735722.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/SuanDec/3 Objects/Benches/1.png"
-dest_files=["res://.godot/imported/1.png-03e8f1f2f20da24e364e0756f4c110e6.ctex"]
+source_file="res://Tileset/Tileset_Sheet/tilemap-characters_packed.png"
+dest_files=["res://.godot/imported/tilemap-characters_packed.png-3b017a96f302d4cfc1747146db735722.ctex"]
 
 [params]
 

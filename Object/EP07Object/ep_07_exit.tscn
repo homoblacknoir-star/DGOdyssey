@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://ukt41qjsie8f"]
+[gd_scene load_steps=8 format=3 uid="uid://oaey8jcu3q5d"]
 
-[ext_resource type="Script" uid="uid://dnvq1jb10opey" path="res://Object/Scene1Object/door.gd" id="1_553xb"]
-[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="1_n4f23"]
-[ext_resource type="Texture2D" uid="uid://bktqmwkr4wavc" path="res://Tileset/Buildings.png" id="2_2jkal"]
-[ext_resource type="Texture2D" uid="uid://bl05h8h1xscaa" path="res://Tileset/tileset_city_free/layer1.png" id="3_2jkal"]
+[ext_resource type="Texture2D" uid="uid://d1g6lhe1h353a" path="res://Tileset/Tileset_Sheet/Tileset.png" id="1_flqj6"]
+[ext_resource type="Script" uid="uid://erj1vej21kl2" path="res://Object/EP07Object/ep_07_exit.gd" id="1_jo1bs"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_jo1bs"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhnt2"]
-texture = ExtResource("2_2jkal")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vurkr"]
+texture = ExtResource("1_flqj6")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -27,11 +26,6 @@ texture = ExtResource("2_2jkal")
 17:0/0 = 0
 18:0/0 = 0
 19:0/0 = 0
-20:0/0 = 0
-21:0/0 = 0
-22:0/0 = 0
-23:0/0 = 0
-24:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -52,11 +46,6 @@ texture = ExtResource("2_2jkal")
 17:1/0 = 0
 18:1/0 = 0
 19:1/0 = 0
-20:1/0 = 0
-21:1/0 = 0
-22:1/0 = 0
-23:1/0 = 0
-24:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -70,15 +59,13 @@ texture = ExtResource("2_2jkal")
 10:2/0 = 0
 11:2/0 = 0
 12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
 15:2/0 = 0
 16:2/0 = 0
 17:2/0 = 0
 18:2/0 = 0
 19:2/0 = 0
-21:2/0 = 0
-22:2/0 = 0
-23:2/0 = 0
-24:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
@@ -94,12 +81,11 @@ texture = ExtResource("2_2jkal")
 12:3/0 = 0
 13:3/0 = 0
 14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
 17:3/0 = 0
 18:3/0 = 0
 19:3/0 = 0
-20:3/0 = 0
-21:3/0 = 0
-22:3/0 = 0
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -120,9 +106,6 @@ texture = ExtResource("2_2jkal")
 17:4/0 = 0
 18:4/0 = 0
 19:4/0 = 0
-20:4/0 = 0
-21:4/0 = 0
-22:4/0 = 0
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
@@ -131,20 +114,8 @@ texture = ExtResource("2_2jkal")
 5:5/0 = 0
 6:5/0 = 0
 7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
 12:5/0 = 0
 13:5/0 = 0
-14:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-21:5/0 = 0
-22:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
@@ -153,22 +124,16 @@ texture = ExtResource("2_2jkal")
 5:6/0 = 0
 6:6/0 = 0
 7:6/0 = 0
-8:6/0 = 0
 9:6/0 = 0
 10:6/0 = 0
-11:6/0 = 0
 12:6/0 = 0
 13:6/0 = 0
 14:6/0 = 0
 15:6/0 = 0
 16:6/0 = 0
+17:6/0 = 0
 18:6/0 = 0
 19:6/0 = 0
-20:6/0 = 0
-21:6/0 = 0
-22:6/0 = 0
-23:6/0 = 0
-24:6/0 = 0
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
@@ -189,18 +154,10 @@ texture = ExtResource("2_2jkal")
 17:7/0 = 0
 18:7/0 = 0
 19:7/0 = 0
-20:7/0 = 0
-21:7/0 = 0
-22:7/0 = 0
-23:7/0 = 0
-24:7/0 = 0
-0:8/0 = 0
 1:8/0 = 0
 2:8/0 = 0
-4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
-7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
 10:8/0 = 0
@@ -213,17 +170,8 @@ texture = ExtResource("2_2jkal")
 17:8/0 = 0
 18:8/0 = 0
 19:8/0 = 0
-20:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
-24:8/0 = 0
 0:9/0 = 0
 1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
 6:9/0 = 0
 7:9/0 = 0
 8:9/0 = 0
@@ -233,21 +181,18 @@ texture = ExtResource("2_2jkal")
 12:9/0 = 0
 13:9/0 = 0
 14:9/0 = 0
+15:9/0 = 0
 16:9/0 = 0
 17:9/0 = 0
 18:9/0 = 0
 19:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
-24:9/0 = 0
 0:10/0 = 0
 1:10/0 = 0
 2:10/0 = 0
 3:10/0 = 0
 4:10/0 = 0
 5:10/0 = 0
+6:10/0 = 0
 7:10/0 = 0
 8:10/0 = 0
 9:10/0 = 0
@@ -255,78 +200,40 @@ texture = ExtResource("2_2jkal")
 11:10/0 = 0
 12:10/0 = 0
 13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
 16:10/0 = 0
 17:10/0 = 0
 18:10/0 = 0
 19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
 4:11/0 = 0
 5:11/0 = 0
 6:11/0 = 0
 7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
 16:11/0 = 0
 17:11/0 = 0
 18:11/0 = 0
 19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-16:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-22:12/0 = 0
-23:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ryng"]
-texture = ExtResource("3_2jkal")
-2:6/0 = 0
-3:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-1:19/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-4:19/0 = 0
-5:19/0 = 0
-6:19/0 = 0
-7:19/0 = 0
-8:19/0 = 0
+[sub_resource type="TileSet" id="TileSet_nkhna"]
+sources/0 = SubResource("TileSetAtlasSource_vurkr")
 
-[sub_resource type="TileSet" id="TileSet_0ryng"]
-sources/0 = SubResource("TileSetAtlasSource_uhnt2")
-sources/1 = SubResource("TileSetAtlasSource_0ryng")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v1qb"]
+size = Vector2(69, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_553xb"]
-size = Vector2(42, 64)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_553xb"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxmia"]
 bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
 border_width_left = 1
 border_width_top = 1
@@ -335,34 +242,32 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 anti_aliasing_size = 10.0
 
-[node name="Door" type="Area2D"]
-script = ExtResource("1_553xb")
+[node name="EP07Exit" type="Area2D"]
+script = ExtResource("1_jo1bs")
 
-[node name="TileMapLayer3" type="TileMapLayer" parent="."]
-self_modulate = Color(0.74978, 0.74978, 0.74977994, 1)
-texture_filter = 1
-scale = Vector2(1.4, 1.4)
-tile_map_data = PackedByteArray("AAD/////AQAFAAcAAAD//wAAAQAFAAgAAAAAAP//AQAGAAcAAAAAAAAAAQAGAAgAAAD///7/AQAFAAYAAAAAAP7/AQAGAAYAAAA=")
-tile_set = SubResource("TileSet_0ryng")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(1.8, 1.8)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 18, 0, 8, 0, 0, 0, 255, 255, 0, 0, 0, 0, 18, 0, 9, 0, 0, 0, 0, 0, 255, 255, 0, 0, 19, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 9, 0, 0, 0)
+tile_set = SubResource("TileSet_nkhna")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_553xb")
+position = Vector2(3.5, 0)
+shape = SubResource("RectangleShape2D_2v1qb")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = -47.0
-offset_top = -64.0
-offset_right = 44.0
-offset_bottom = -49.0
+offset_left = -29.0
+offset_top = -67.0
+offset_right = 31.0
+offset_bottom = -52.0
 size_flags_stretch_ratio = 0.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
-theme_override_fonts/font = ExtResource("1_n4f23")
+theme_override_fonts/font = ExtResource("2_jo1bs")
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_553xb")
-text = "[ E ] Interact"
+theme_override_styles/normal = SubResource("StyleBoxFlat_vxmia")
+text = "[ E ] Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 

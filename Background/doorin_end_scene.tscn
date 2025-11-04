@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://ukt41qjsie8f"]
+[gd_scene load_steps=6 format=4 uid="uid://bjmnc771vto6d"]
 
-[ext_resource type="Script" uid="uid://dnvq1jb10opey" path="res://Object/Scene1Object/door.gd" id="1_553xb"]
-[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="1_n4f23"]
-[ext_resource type="Texture2D" uid="uid://bktqmwkr4wavc" path="res://Tileset/Buildings.png" id="2_2jkal"]
-[ext_resource type="Texture2D" uid="uid://bl05h8h1xscaa" path="res://Tileset/tileset_city_free/layer1.png" id="3_2jkal"]
+[ext_resource type="Texture2D" uid="uid://bktqmwkr4wavc" path="res://Tileset/Buildings.png" id="1_rymml"]
+[ext_resource type="Texture2D" uid="uid://bl05h8h1xscaa" path="res://Tileset/tileset_city_free/layer1.png" id="2_fu2hp"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhnt2"]
-texture = ExtResource("2_2jkal")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iecco"]
+texture = ExtResource("1_rymml")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -292,8 +290,8 @@ texture = ExtResource("2_2jkal")
 1:14/0 = 0
 2:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ryng"]
-texture = ExtResource("3_2jkal")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dmieh"]
+texture = ExtResource("2_fu2hp")
 2:6/0 = 0
 3:6/0 = 0
 5:6/0 = 0
@@ -319,52 +317,15 @@ texture = ExtResource("3_2jkal")
 7:19/0 = 0
 8:19/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_0ryng"]
-sources/0 = SubResource("TileSetAtlasSource_uhnt2")
-sources/1 = SubResource("TileSetAtlasSource_0ryng")
+[sub_resource type="TileSet" id="TileSet_ot8vy"]
+sources/0 = SubResource("TileSetAtlasSource_iecco")
+sources/1 = SubResource("TileSetAtlasSource_dmieh")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_553xb"]
-size = Vector2(42, 64)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_553xb"]
-bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-anti_aliasing_size = 10.0
-
-[node name="Door" type="Area2D"]
-script = ExtResource("1_553xb")
+[node name="DoorinEndScene" type="Node2D"]
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 self_modulate = Color(0.74978, 0.74978, 0.74977994, 1)
 texture_filter = 1
 scale = Vector2(1.4, 1.4)
 tile_map_data = PackedByteArray("AAD/////AQAFAAcAAAD//wAAAQAFAAgAAAAAAP//AQAGAAcAAAAAAAAAAQAGAAgAAAD///7/AQAFAAYAAAAAAP7/AQAGAAYAAAA=")
-tile_set = SubResource("TileSet_0ryng")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_553xb")
-
-[node name="Label" type="Label" parent="."]
-texture_filter = 1
-offset_left = -47.0
-offset_top = -64.0
-offset_right = 44.0
-offset_bottom = -49.0
-size_flags_stretch_ratio = 0.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
-theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
-theme_override_fonts/font = ExtResource("1_n4f23")
-theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_553xb")
-text = "[ E ] Interact"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+tile_set = SubResource("TileSet_ot8vy")

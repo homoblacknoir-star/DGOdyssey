@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://uadnct5n4lfo"]
+
+[ext_resource type="Texture2D" uid="uid://0n1dfitkyb7t" path="res://Tileset/Ridges/2.png" id="1_41aid"]
+[ext_resource type="Script" uid="uid://dca3rqs7edan8" path="res://Object/EP06Object/ep_06_exit.gd" id="1_swlxa"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_swlxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0talh"]
+size = Vector2(45, 78)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0eqw"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="EP06Exit" type="Area2D"]
+script = ExtResource("1_swlxa")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(1, 25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_41aid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 7)
+shape = SubResource("RectangleShape2D_0talh")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -30.0
+offset_top = -35.0
+offset_right = 30.0
+offset_bottom = -20.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_swlxa")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_v0eqw")
+text = "[ E ] Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

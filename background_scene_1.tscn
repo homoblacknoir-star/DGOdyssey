@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drcdcfy74qi2u"]
+[gd_scene load_steps=16 format=3 uid="uid://drcdcfy74qi2u"]
 
 [ext_resource type="Texture2D" uid="uid://mtxatngq8spb" path="res://Tileset/Element/Box4.png" id="3_7n4pj"]
 [ext_resource type="Texture2D" uid="uid://b5215nfjyolr7" path="res://Tileset/Element/Bucket.png" id="4_fawxf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5qux88ghr2d4" path="res://Tileset/Element/1.png" id="12_hqagh"]
 [ext_resource type="Texture2D" uid="uid://bp6gtsbrxtjyo" path="res://Tileset/Element/22.png" id="13_vt8fj"]
 [ext_resource type="Texture2D" uid="uid://xlm8s8jttmju" path="res://Tileset/Element/7.png" id="14_mnpcb"]
+[ext_resource type="Texture2D" uid="uid://dbk67jdexki13" path="res://Tileset/2 Decoration/12.png" id="15_naj4b"]
 [ext_resource type="Texture2D" uid="uid://ifn0ypf4wtxv" path="res://Tileset/Element/8.png" id="16_ggit0"]
 [ext_resource type="Texture2D" uid="uid://bwb3yma86k6hl" path="res://Tileset/Element/21.png" id="17_xgh0y"]
 [ext_resource type="Texture2D" uid="uid://bvk7rtp0m5lmo" path="res://Tileset/Element/Mop.png" id="18_srel7"]
@@ -42,17 +43,19 @@ texture = ExtResource("5_chhqo")
 [node name="Board2" type="Sprite2D" parent="."]
 modulate = Color(0.7708395, 0.77083945, 0.77083945, 1)
 texture_filter = 1
-position = Vector2(957, 514)
+position = Vector2(975, 517)
 scale = Vector2(3, 3)
 texture = ExtResource("7_ha425")
 
 [node name="Building01" type="Sprite2D" parent="."]
+self_modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
 texture_filter = 1
 position = Vector2(-317.00003, -97)
 scale = Vector2(7, 9.316)
 texture = ExtResource("8_ahdok")
 
 [node name="Building05" type="Sprite2D" parent="."]
+self_modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
 texture_filter = 1
 position = Vector2(1712, -374.99997)
 scale = Vector2(9.5, 9.115)
@@ -99,7 +102,7 @@ texture = ExtResource("16_ggit0")
 [node name="21" type="Sprite2D" parent="."]
 modulate = Color(0.86036915, 0.8603692, 0.8603692, 1)
 texture_filter = 1
-position = Vector2(781, 615)
+position = Vector2(758, 616)
 scale = Vector2(3, 3)
 texture = ExtResource("17_xgh0y")
 
@@ -109,3 +112,15 @@ texture_filter = 1
 position = Vector2(1000, 597)
 scale = Vector2(3, 3)
 texture = ExtResource("18_srel7")
+
+[node name="12" type="Sprite2D" parent="."]
+self_modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
+position = Vector2(274, 370)
+scale = Vector2(3, 3)
+texture = ExtResource("15_naj4b")
+
+[node name="13" type="Sprite2D" parent="."]
+self_modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
+position = Vector2(355, 370)
+scale = Vector2(3, 3)
+texture = ExtResource("15_naj4b")

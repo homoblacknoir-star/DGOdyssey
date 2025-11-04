@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://2dlafskrg2pk"]
+
+[ext_resource type="Texture2D" uid="uid://bfwrs5llh0wmu" path="res://Tileset/Public Suan/Fountain.png" id="1_1u38o"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_cyyqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyyqr"]
+atlas = ExtResource("1_1u38o")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn6ed"]
+atlas = ExtResource("1_1u38o")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3b4k"]
+atlas = ExtResource("1_1u38o")
+region = Rect2(144, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wkos"]
+atlas = ExtResource("1_1u38o")
+region = Rect2(216, 0, 72, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_evedn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyyqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn6ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3b4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wkos")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u38o"]
+size = Vector2(60, 66)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn6ed"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="Fountain" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_evedn")
+autoplay = "default"
+frame_progress = 0.7452769
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1u38o")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -45.0
+offset_top = -52.0
+offset_right = 46.0
+offset_bottom = -37.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_cyyqr")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_xn6ed")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
