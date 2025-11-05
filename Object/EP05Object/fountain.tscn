@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://2dlafskrg2pk"]
+[gd_scene load_steps=11 format=3 uid="uid://2dlafskrg2pk"]
 
 [ext_resource type="Texture2D" uid="uid://bfwrs5llh0wmu" path="res://Tileset/Public Suan/Fountain.png" id="1_1u38o"]
+[ext_resource type="Script" uid="uid://pmgn0u2btjqo" path="res://Object/EP05Object/fountain.gd" id="1_xn6ed"]
 [ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="2_cyyqr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cyyqr"]
@@ -40,7 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1u38o"]
-size = Vector2(60, 66)
+size = Vector2(81, 85)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn6ed"]
 bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
@@ -52,22 +53,24 @@ border_color = Color(1, 1, 1, 1)
 anti_aliasing_size = 10.0
 
 [node name="Fountain" type="Area2D"]
+script = ExtResource("1_xn6ed")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_evedn")
 autoplay = "default"
 frame_progress = 0.7452769
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
+position = Vector2(24, 1)
 shape = SubResource("RectangleShape2D_1u38o")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = -45.0
-offset_top = -52.0
-offset_right = 46.0
-offset_bottom = -37.0
+offset_left = 16.0
+offset_top = -28.0
+offset_right = 107.0
+offset_bottom = -13.0
 size_flags_stretch_ratio = 0.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
@@ -78,3 +81,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xn6ed")
 text = "[ E ] Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

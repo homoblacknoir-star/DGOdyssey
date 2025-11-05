@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if direction == 0:
 			# ถ้าไม่ขยับ ให้เล่นท่า "idle"
-			sprite_2d.play("default_right")
+			sprite_2d.play("idle")
 		elif direction > 0 :
 			# ถ้าขยับ ให้เล่นท่า "running"
 			sprite_2d.play("running")
@@ -61,5 +61,4 @@ func _physics_process(delta: float) -> void:
 	
 
 
-	
 	

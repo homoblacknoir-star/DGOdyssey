@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cvbpa2ahcrums"]
+[gd_scene load_steps=29 format=4 uid="uid://cvbpa2ahcrums"]
 
 [ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="1_ti4ic"]
 [ext_resource type="Texture2D" uid="uid://bawdfwqbc60g8" path="res://Tileset/Element/building_01.png" id="2_bt1ww"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://blqvu481btki" path="res://Tileset/2 Billboard/128x64_2.png" id="12_lcndf"]
 [ext_resource type="Texture2D" uid="uid://dlvkhe2fmsonw" path="res://Tileset/2 Billboard/Pillar.png" id="13_lr4fi"]
 [ext_resource type="Texture2D" uid="uid://c3prwapn3l1rt" path="res://Tileset/2 Billboard/Pillar2.png" id="14_eeqth"]
+[ext_resource type="PackedScene" uid="uid://dw2toeukrmcdu" path="res://Object/EP08Object/thief.tscn" id="20_eeqth"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uvs7"]
 texture = ExtResource("2_wa0rb")
@@ -1516,10 +1517,15 @@ position = Vector2(1012.00006, 471)
 scale = Vector2(2.4, 2.4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_mbrkt")]
-position = Vector2(152, 441)
+position = Vector2(150, 452.00003)
+scale = Vector2(0.9, 0.9)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-2.2222223, -103.333374)
 zoom = Vector2(1.1, 1.1)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="Area2D" parent="." instance=ExtResource("20_eeqth")]
+position = Vector2(350.99997, 430)
+scale = Vector2(2.2, 2.2)

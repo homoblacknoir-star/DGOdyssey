@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cvlgjq28ojsw4"]
+[gd_scene load_steps=28 format=4 uid="uid://cvlgjq28ojsw4"]
 
 [ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="1_6is47"]
 [ext_resource type="Texture2D" uid="uid://blqvu481btki" path="res://Tileset/2 Billboard/128x64_2.png" id="2_fbbcj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d0avv3ihxuw2d" path="res://Tileset/3 Objects/2 Tower/5.png" id="8_h0guc"]
 [ext_resource type="Texture2D" uid="uid://cqpc6ha8v0ag7" path="res://Tileset/3 Objects/2 Tower/4.png" id="9_2anwu"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="13_0lg5o"]
+[ext_resource type="PackedScene" uid="uid://4f04beyiya0f" path="res://Object/at_last_window.tscn" id="13_2h1je"]
 [ext_resource type="PackedScene" uid="uid://bjmnc771vto6d" path="res://Background/doorin_end_scene.tscn" id="17_2h1je"]
 [ext_resource type="Texture2D" uid="uid://dv6si8v2hoffr" path="res://Tileset/w.png" id="17_8iw03"]
 [ext_resource type="PackedScene" uid="uid://c8o5nrb1uv1mg" path="res://Object/EndSceneObject/komputer_in_end_scene.tscn" id="17_gbb8o"]
@@ -2535,6 +2536,10 @@ position = Vector2(-22, -20)
 self_modulate = Color(0.646029, 0.646029, 0.646029, 1)
 position = Vector2(831, 559)
 scale = Vector2(3, 3)
+
+[node name="AtLastWindow" parent="." instance=ExtResource("13_2h1je")]
+position = Vector2(311, 594)
+scale = Vector2(2, 2)
 
 [node name="KomputerInEndScene" parent="." instance=ExtResource("17_gbb8o")]
 position = Vector2(542, 491)

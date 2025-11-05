@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://4f04beyiya0f"]
+
+[ext_resource type="Script" uid="uid://uvdp2slk2wqd" path="res://Object/EP08Object/at_last_window.gd" id="1_vl3ti"]
+[ext_resource type="Texture2D" uid="uid://crume2ku4qd37" path="res://Tileset/Box6.png" id="2_kp7st"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_oi03m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r8k7r"]
+radius = 27.018513
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o76je"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="AtLastWindow" type="Area2D"]
+script = ExtResource("1_vl3ti")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.7204674, 0.7204675, 0.7204674, 1)
+texture_filter = 1
+texture = ExtResource("2_kp7st")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_r8k7r")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -59.0
+offset_top = -75.0
+offset_right = 34.0
+offset_bottom = -60.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_oi03m")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_o76je")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

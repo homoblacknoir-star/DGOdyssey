@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DGOdyssey_kom (Copy)"
-run/main_scene="uid://b4jtp6lok6w5s"
+run/main_scene="uid://cjfike4qd76n6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]
@@ -25,15 +25,25 @@ Global="*res://global.gd"
 
 directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
+"Character/Bob": "res://Dialog/Character/Bob.dch",
+"Character/Rob": "res://Dialog/Character/Rob.dch",
 "Henry": "res://Dialog/Character/Henry.dch",
+"Hogan": "res://Dialog/Character/Hogan.dch",
+"John Jr": "res://Dialog/Character/John Jr.dch",
+"July": "res://Dialog/Character/July.dch",
 "Kai": "res://Dialog/Character/Kai.dch",
 "Kom-puter": "res://Character/Kom-puter.dch",
+"MC": "res://Dialog/Character/MC.dch",
+"Mary": "res://Dialog/Character/Mary.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
 "Teacher": "res://Dialog/Character/Teacher.dch",
+"TechTeacher": "res://Dialog/Character/TechTeacher.dch",
+"Thief": "res://Dialog/Character/Thief.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "AtWindow": "res://Dialog/Timeline/Alexhome/AtWindow.dtl",
+"BYEBYEBYE": "res://Dialog/Timeline/EndScene/BYEBYEBYE.dtl",
 "EP01_back_to_teacher": "res://Dialog/test/EP01_back_to_teacher.dtl",
 "EP01_check_all": "res://Dialog/test/EP01_check_all.dtl",
 "EP01_ending": "res://Dialog/test/EP01_ending.dtl",
@@ -53,8 +63,10 @@ directories/dtl_directory={
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
+"Nephew": "res://Dialog/Timeline/EP06/Nephew.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
 "TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
+"Thieffeelsorry": "res://Dialog/Timeline/EP08/Thieffeelsorry.dtl",
 "friends": "res://Dialog/Timeline/EP02/friends.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
@@ -118,6 +130,10 @@ folder_colors={
 "res://Tileset/Tileset_Sheet/": "red",
 "res://UI/": "blue"
 }
+
+[global_group]
+
+Player=""
 
 [input]
 

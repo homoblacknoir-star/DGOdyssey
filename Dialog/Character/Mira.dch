@@ -10,12 +10,58 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Mira-Normal",
 &"description": "",
 &"display_name": "Mira",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Mira-Angry": {
+"export_overrides": {
+"image": "\"res://Character/Mira/Mira-Angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mira-Cry": {
+"export_overrides": {
+"image": "\"res://Character/Mira/Mira-Cry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mira-Doubt": {
+"export_overrides": {
+"image": "\"res://Character/Mira/Mira-Doubt.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mira-Normal": {
+"export_overrides": {
+"image": "\"res://Character/Mira/Mira-Normal2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mira-Smile": {
+"export_overrides": {
+"image": "\"res://Character/Mira/Mira-Smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }

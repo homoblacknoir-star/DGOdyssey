@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://gw4ybpen70f6"]
+[gd_scene load_steps=33 format=4 uid="uid://gw4ybpen70f6"]
 
 [ext_resource type="Texture2D" uid="uid://8yeg548gjeox" path="res://Background/City_in_different_time/noon/9.png" id="1_2ku4a"]
 [ext_resource type="Texture2D" uid="uid://cs836nurrgejv" path="res://Tileset/Tileset_Sheet/Swamp.png" id="2_spqk1"]
@@ -18,9 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://w0oms0hpd4w0" path="res://Tileset/SuanDec/3 Objects/Other/Garbage_Can2.png" id="12_vpl35"]
 [ext_resource type="Texture2D" uid="uid://wij0n20wdvlc" path="res://Tileset/Public Suan/Other/Ramp1.png" id="14_51mcs"]
 [ext_resource type="Texture2D" uid="uid://cw8cqxjjerog5" path="res://Tileset/Public Suan/Other/Rapm3.png" id="15_igqld"]
-[ext_resource type="Texture2D" uid="uid://coypl7w6c2vn2" path="res://Tileset/Public Suan/Other/Skateboard3.png" id="16_mde4u"]
 [ext_resource type="Texture2D" uid="uid://bjfwr8250h50i" path="res://Tileset/Public Suan/Other/Skateboard4.png" id="17_fig5f"]
 [ext_resource type="Texture2D" uid="uid://cor1lvt3kymi6" path="res://Tileset/Bushes/1.png" id="19_2ku4a"]
+[ext_resource type="Texture2D" uid="uid://dtjiktjk2n447" path="res://Tileset/craftpix-net-223841-free-city-enemies-pixel-art-sprite-sheets/1/Idle.png" id="21_f5yv3"]
+[ext_resource type="PackedScene" uid="uid://bl3yi3km0kgyk" path="res://Object/EP04Object/boband_rob.tscn" id="23_igqld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud33o"]
 texture = ExtResource("2_spqk1")
@@ -949,6 +950,42 @@ sources/1 = SubResource("TileSetAtlasSource_unb76")
 sources/2 = SubResource("TileSetAtlasSource_3wki1")
 sources/3 = SubResource("TileSetAtlasSource_f2wft")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_51mcs"]
+atlas = ExtResource("21_f5yv3")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igqld"]
+atlas = ExtResource("21_f5yv3")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mde4u"]
+atlas = ExtResource("21_f5yv3")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fig5f"]
+atlas = ExtResource("21_f5yv3")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1lkf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51mcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igqld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mde4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fig5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
 [node name="EP04" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -1022,16 +1059,10 @@ position = Vector2(572, 461.00003)
 scale = Vector2(2.7152777, 3.5)
 texture = ExtResource("15_igqld")
 
-[node name="Skateboard3" type="Sprite2D" parent="Elements"]
-self_modulate = Color(0.8431839, 0.8431839, 0.84318376, 1)
-position = Vector2(517.00006, 496.00003)
-scale = Vector2(3.5, 3.5)
-texture = ExtResource("16_mde4u")
-
 [node name="Skateboard4" type="Sprite2D" parent="Elements"]
 self_modulate = Color(0.8089983, 0.8089983, 0.8089982, 1)
-position = Vector2(556.00006, 495)
-scale = Vector2(3.5, 3.5)
+position = Vector2(543, 489)
+scale = Vector2(4, 4)
 texture = ExtResource("17_fig5f")
 
 [node name="4" type="Sprite2D" parent="Elements"]
@@ -1047,6 +1078,20 @@ texture = ExtResource("19_2ku4a")
 [node name="EP04_Fence" parent="." instance=ExtResource("8_0rqvs")]
 position = Vector2(1087, 432)
 scale = Vector2(1.9999999, 1.9999999)
+
+[node name="BobandRob" parent="." instance=ExtResource("23_igqld")]
+texture_filter = 1
+position = Vector2(653.99994, 459)
+scale = Vector2(2.2, 2.2)
+
+[node name="Bob" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(428, 423)
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_d1lkf")
+autoplay = "default"
+frame_progress = 0.94234526
+flip_h = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_ud33o")]
 position = Vector2(61.00003, 460)

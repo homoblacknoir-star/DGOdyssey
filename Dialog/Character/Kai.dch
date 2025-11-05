@@ -10,12 +10,67 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Kai-Normal",
 &"description": "",
 &"display_name": "Kai",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Kai-Angry": {
+"export_overrides": {
+"image": "\"res://Character/Kai/Kai-Angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Kai-Fear": {
+"export_overrides": {
+"image": "\"res://Character/Kai/Kai-Fear.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Kai-Kidding": {
+"export_overrides": {
+"image": "\"res://Character/Kai/Kai-Kidding.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Kai-Normal": {
+"export_overrides": {
+"image": "\"res://Character/Kai/kai-normal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Kai-Sad": {
+"export_overrides": {
+"image": "\"res://Character/Kai/Kai-Sad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Kai-Smile": {
+"export_overrides": {
+"image": "\"res://Character/Kai/Kai-Smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+}
+},
 &"scale": 1.0
 }

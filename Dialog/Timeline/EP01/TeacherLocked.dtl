@@ -1,7 +1,13 @@
 if !Global.has_talked_to_kai and !Global.has_talked_to_mira:
-	Teacher: ลองไปคุยกับ Kai และ Mira ก่อนนะ
+	join Teacher (Teacher-Smile) left
+	Teacher (Teacher-Smile): ลองไปคุยกับ Kai และ Mira ก่อนนะ
+	leave Teacher
 elif !Global.has_talked_to_kai:
-	Teacher: ลองไปคุยกับ Kai ก่อนนะ
+	join Teacher (Teacher-Smile) left
+	Teacher (Teacher-Smile): ลองไปคุยกับ Kai ก่อนนะ
+	leave Teacher
 elif !Global.has_talked_to_mira:
-	Teacher: ลองไปคุยกับ Mira ก่อนนะ
+	join Teacher (Teacher-Smile) left
+	Teacher (Teacher-Smile): ลองไปคุยกับ Mira ก่อนนะ
+	leave Teacher
 [end_timeline]
