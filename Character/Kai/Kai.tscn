@@ -493,7 +493,8 @@ anti_aliasing_size = 10.0
 script = ExtResource("1_mxyro")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.17268041, 0.17268044)
+position = Vector2(0, 6.999999)
+scale = Vector2(0.15850516, 0.15850514)
 sprite_frames = SubResource("SpriteFrames_dvm3k")
 animation = &"idle"
 autoplay = "idle"
