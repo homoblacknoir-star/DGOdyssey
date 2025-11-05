@@ -10,12 +10,49 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Teacher-Smile",
 &"description": "",
 &"display_name": "Teacher",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Teacher-Down": {
+"export_overrides": {
+"image": "\"res://Character/Teacher_/Teacher-Down.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Teacher-Laugh": {
+"export_overrides": {
+"image": "\"res://Character/Teacher_/teacher-laugh.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Teacher-Normal": {
+"export_overrides": {
+"image": "\"res://Character/Teacher_/Teacher-Normal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Teacher-Smile": {
+"export_overrides": {
+"image": "\"res://Character/Teacher_/teacher-smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
