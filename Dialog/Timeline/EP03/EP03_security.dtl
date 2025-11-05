@@ -1,39 +1,51 @@
 # EP03: Cyber Security (TH-only · DTL-native · Sitcom Tone · Polished)
-join Alex left
-join Henry : classmate_a at left
-join Kai : classmate_b at right
-join Mira : classmate_c at far
-join TechTeacher : cs_teacher at podium
+join TechTeacher (Smile) left
 TechTeacher: สวัสดีครับ วันนี้เข้าเรื่อง "Cyber Security" แบบสั้นๆ แต่ใช้ได้จริง
 TechTeacher: วันนี้มีเรียน 2  ข้อ(1) รหัสผ่านให้รอด (2) ฟิชชิงไม่หลอก
+leave --All--
+join Mira (Mira-Smile) left
 Mira: ขอสูตรเช็กลิงก์ง่ายๆและได้ผล หน่อยค่ะ
+leave --All--
+join TechTeacher left
 TechTeacher: เยี่ยม เดี๋ยวมีการบ้าน แล้วไปลองทำเป็นทีม
-update  : player.can_move=true
+leave --All--
 
 # --- Scene 2: Demo (CS Teacher สาธิต 3 เรื่อง) ---
+join TechTeacher left
 TechTeacher: เดโม 1—รหัสผ่าน\: ใช้ **passphrase** เปิด 2FA แล้วเก็บใน Password Manager
 TechTeacher: เดโม 2—ฟิชชิง\: ชี้ลิงก์ดูโดเมน เช็กตัวสะกด และอย่ากดลิงก์จากเมลเร่งด่วน
+leave --All--
+join Kai (Kai-Smile) left
 Kai: ว้าว. . .แบบนี้จำง่ายครับ
+leave --All--
+join TechTeacher (Smile) left
 TechTeacher: โอเค ต่อไปไปลองกับเพื่อน—แต่ละคนมีมินิควิซของตัวเอง
+leave --All--
 
 # --- Scene 2.5: Hub (ต้องคุยครบ Kai/Mira/Henry) ---
 [wait time="0.3"]
+join Alex right
 Alex: จะเริ่มกับใครก่อนดี?
 label KaiQuiz
 - คุยกับ Kai (รหัสผ่าน/2FA/Password Manager)
   Alex: 2FA คืออะไรหรอ Kai
+  join Kai (Kai-Normal) left
   Kai: ฉันจะลองให้นายตอบ
   - 
     <Empty Text Event>
     jump KaiQuiz
   - 
     <Empty Text Event>
+leave --All--
+join Mira (Mira-Smile) left
 label MiraQuiz
 - คุยกับ Mira (ฟิชชิง/สแคม/มัลแวร์)
   Alex: ฟิชชิง สแคม มัลแวร์
   - 
   jump MiraQuiz
   - 
+leave --All--
+join Henry left
 - คุยกับ Henry (Wi‑Fi สาธารณะ/HTTPS/VPN)
   Http กับ Https ต่างกันอย่างไร
   - 
@@ -42,7 +54,7 @@ label MiraQuiz
 
 # --- Scene 3A: Apply with Kai (mini-quiz · กวนเบา ๆ) ---
 label Password
-TechTeacher: สมมุติว่าครูมี Password หนึ่งชุด\
+TechTeacher: สมมุติว่าครูมี Password หนึ่งชุด
 จะทำอย่างไรให้เพิ่มความแข็งแรงได้มากขึ้น
 - เติมเลขยาว ๆ เช่น “Alex123456789”
   TechTeacher: เลขเยอะๆ จำง่ายแต่อาจถูกแฮกง่ายเช่นกันนะ ลองเลือกใหม่
