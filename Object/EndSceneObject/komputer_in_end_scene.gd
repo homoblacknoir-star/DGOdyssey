@@ -7,15 +7,14 @@ var player_is_near: bool = false
 
 # เชื่อมต่อ Signal ตอนเริ่ม
 func _ready():
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+	pass
 var showInteractionLabel = false
 
 	
 func _process(_delta):
 	$Label.visible = showInteractionLabel
 	if showInteractionLabel && Input.is_action_just_pressed("interact"):
-		Dialogic.start("res://Dialog/Timeline/Alexhome/AtWindow.dtl")
+		Dialogic.start("res://Dialog/Timeline/EP08/EP08_Between_Two_Worlds.dtl")
 	
 func _on_body_entered(body):
 	# [แก้ไข] ตรวจสอบว่าเป็น Player และ Object ยังใช้ได้
@@ -33,7 +32,7 @@ func _unhandled_input(event: InputEvent):
 	
 	# ถ้า 1.ผู้เล่นอยู่ใกล้ 2.ยังไม่เคยใช้ 3.กดปุ่ม "interact"
 	if player_is_near and is_active and event.is_action_pressed("interact"):
-		Dialogic.start("res://Dialog/Timeline/EndScene/Komputer.dtl")
+		Dialogic.start("res://Dialog/Timeline/EP08/EP08_Between_Two_Worlds.dtl")
 		# "ใช้สิทธิ์" ทันที (ตั้งเป็น false)
 		is_active = false 
 		

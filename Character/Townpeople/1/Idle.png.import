@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3krxphe1sbm2"
-path="res://.godot/imported/Gemini_Generated_Image_44hkgy44hkgy44hk.png-a89f9e669173dc21583f032b28d2c312.ctex"
+uid="uid://cnfd0h1eqwy1x"
+path="res://.godot/imported/Idle.png-151e21ecfa2bc1b543b663790d1b9a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Character/Gemini_Generated_Image_44hkgy44hkgy44hk.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_44hkgy44hkgy44hk.png-a89f9e669173dc21583f032b28d2c312.ctex"]
+source_file="res://Character/Townpeople/1/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-151e21ecfa2bc1b543b663790d1b9a0a.ctex"]
 
 [params]
 

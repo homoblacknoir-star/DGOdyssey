@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://iwlpf4jn1ca"]
+[gd_scene load_steps=29 format=4 uid="uid://iwlpf4jn1ca"]
 
 [ext_resource type="Texture2D" uid="uid://c1wn1b6t6ly38" path="res://Background/City_in_different_time/PurpleCloud/8.png" id="1_6sndd"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_s057g"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://bu7pffwlit7pk" path="res://Tileset/SuanDec/3 Objects/Fence/6.png" id="13_s1jfw"]
 [ext_resource type="Texture2D" uid="uid://kj2iw6afvfe3" path="res://Tileset/Industial/Barrel2.png" id="14_cw5ue"]
 [ext_resource type="Texture2D" uid="uid://ci2k2dvsjpc7i" path="res://Tileset/Industial/Pointer2.png" id="15_8rgcb"]
+[ext_resource type="Texture2D" uid="uid://o2o4jvqgwr8j" path="res://Tileset/Public Suan/Benches/2.png" id="15_cw5ue"]
+[ext_resource type="Texture2D" uid="uid://cnfd0h1eqwy1x" path="res://Character/Townpeople/1/Idle.png" id="16_8rgcb"]
 [ext_resource type="PackedScene" uid="uid://yvghhyuew5vq" path="res://Object/EP05Object/ep_05_door.tscn" id="16_cw5ue"]
+[ext_resource type="PackedScene" uid="uid://bi1ubsaxbvvid" path="res://Object/EP05Object/july.tscn" id="17_8rgcb"]
 [ext_resource type="PackedScene" uid="uid://bwaqxopoi3y2x" path="res://Scene/SCENS/main_character.tscn" id="18_xsjx8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dli56"]
@@ -878,6 +881,56 @@ sources/0 = SubResource("TileSetAtlasSource_dli56")
 sources/1 = SubResource("TileSetAtlasSource_ea5ki")
 sources/2 = SubResource("TileSetAtlasSource_apwey")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sndd"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsjx8"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ens40"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxpxf"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oh4o"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldcqk"]
+atlas = ExtResource("16_8rgcb")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_whnym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sndd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsjx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ens40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxpxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oh4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldcqk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="EP05" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -914,8 +967,8 @@ flip_h = true
 [node name="Building04" type="Sprite2D" parent="Elements"]
 self_modulate = Color(0.7835248, 0.7835229, 0.7835233, 1)
 texture_filter = 1
-position = Vector2(612, 48.000004)
-scale = Vector2(6, 6)
+position = Vector2(673, -113)
+scale = Vector2(8, 8)
 texture = ExtResource("5_ea5ki")
 
 [node name="22x402" type="Sprite2D" parent="Elements"]
@@ -933,8 +986,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("11_cw5ue")
 
 [node name="6" type="Sprite2D" parent="Elements"]
-position = Vector2(1093, 436.99997)
-scale = Vector2(2.5, 2.9374995)
+position = Vector2(1069.0001, 416)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("13_s1jfw")
 
 [node name="Barrel2" type="Sprite2D" parent="Elements"]
@@ -943,13 +996,12 @@ scale = Vector2(3, 3)
 texture = ExtResource("14_cw5ue")
 
 [node name="Pointer2" type="Sprite2D" parent="Elements"]
-position = Vector2(969.0001, 477)
-scale = Vector2(3, 3.3750024)
+position = Vector2(766, 466)
+scale = Vector2(4, 4)
 texture = ExtResource("15_8rgcb")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("18_xsjx8")]
-position = Vector2(292, 458)
-scale = Vector2(0.8, 0.8)
+position = Vector2(36, 440)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-2.2222223, -103.333374)
@@ -958,5 +1010,21 @@ position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
 [node name="EP05Door" parent="." instance=ExtResource("16_cw5ue")]
-position = Vector2(1084, 435)
-scale = Vector2(1.9999999, 1.9999999)
+position = Vector2(1066, 385)
+scale = Vector2(3, 3)
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(510, 495.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("15_cw5ue")
+
+[node name="Theif" type="AnimatedSprite2D" parent="."]
+position = Vector2(756, 419)
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_whnym")
+autoplay = "default"
+frame_progress = 0.5847873
+
+[node name="July" parent="." instance=ExtResource("17_8rgcb")]
+position = Vector2(500, 439)
+scale = Vector2(2.3, 2.3)

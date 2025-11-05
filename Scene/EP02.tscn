@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://b1yfmtnqolmt"]
+[gd_scene load_steps=29 format=4 uid="uid://b1yfmtnqolmt"]
 
 [ext_resource type="Texture2D" uid="uid://e1xlrglvjyjg" path="res://Background/City_in_different_time/mornin/7.png" id="1_4asbp"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_37nqt"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dhiy4o5ovkcxg" path="res://Object/EP02Object/hall_door.tscn" id="10_4asbp"]
 [ext_resource type="Texture2D" uid="uid://dh81kj7svo88i" path="res://Character/Mira/mira.png" id="10_x7w5p"]
 [ext_resource type="Texture2D" uid="uid://bl1ixmx1uxqvu" path="res://Tileset/Industial/Bench.png" id="11_x7w5p"]
+[ext_resource type="Texture2D" uid="uid://bugcxbpy4g4ba" path="res://Character/Henry/Idle.png" id="12_om75s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypl2o"]
 texture = ExtResource("2_37nqt")
@@ -1668,6 +1669,42 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ikf7"]
+atlas = ExtResource("12_om75s")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrcvo"]
+atlas = ExtResource("12_om75s")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vja"]
+atlas = ExtResource("12_om75s")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2da10"]
+atlas = ExtResource("12_om75s")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iiqxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ikf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrcvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7vja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2da10")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
 [node name="EP02" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -1744,7 +1781,14 @@ position = Vector2(-64.13364, -0.34721375)
 texture = ExtResource("11_x7w5p")
 
 [node name="Mira_doll" type="AnimatedSprite2D" parent="."]
-position = Vector2(441.99988, 496.99997)
+position = Vector2(472, 498.00003)
 scale = Vector2(2.8000004, 2.8)
 sprite_frames = SubResource("SpriteFrames_3ikf7")
 frame_progress = 0.23870775
+
+[node name="Henry" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(400, 485)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_iiqxr")
+autoplay = "default"
