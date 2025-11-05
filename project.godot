@@ -25,12 +25,20 @@ Global="*res://global.gd"
 
 directories/dch_directory={
 "Alex": "res://Dialog/Character/Alex.dch",
+"Character/Bob": "res://Dialog/Character/Bob.dch",
+"Character/Rob": "res://Dialog/Character/Rob.dch",
 "Henry": "res://Dialog/Character/Henry.dch",
+"Hogan": "res://Dialog/Character/Hogan.dch",
+"John Jr": "res://Dialog/Character/John Jr.dch",
+"July": "res://Dialog/Character/July.dch",
 "Kai": "res://Dialog/Character/Kai.dch",
 "Kom-puter": "res://Character/Kom-puter.dch",
+"MC": "res://Dialog/Character/MC.dch",
+"Mary": "res://Dialog/Character/Mary.dch",
 "Mira": "res://Dialog/Character/Mira.dch",
 "Teacher": "res://Dialog/Character/Teacher.dch",
 "TechTeacher": "res://Dialog/Character/TechTeacher.dch",
+"Thief": "res://Dialog/Character/Thief.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -55,6 +63,7 @@ directories/dtl_directory={
 "KaiEP01": "res://Dialog/Timeline/EP01/KaiEP01.dtl",
 "Lesson": "res://Dialog/Timeline/EP01/Lesson.dtl",
 "Mira": "res://Dialog/Timeline/EP01/Mira.dtl",
+"Nephew": "res://Dialog/Timeline/EP06/Nephew.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
 "TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
 "friends": "res://Dialog/Timeline/EP02/friends.dtl",

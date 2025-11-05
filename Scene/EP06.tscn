@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://cajwtg8sdqewj"]
+[gd_scene load_steps=53 format=4 uid="uid://cajwtg8sdqewj"]
 
 [ext_resource type="Texture2D" uid="uid://dai4g5s7c55cv" path="res://Background/City_in_different_time/midnight/10.png" id="1_340vs"]
 [ext_resource type="Texture2D" uid="uid://bph6cmvdollmo" path="res://Tileset/SuanDec/2 Background/Day/5.png" id="2_7ujt5"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://2dlafskrg2pk" path="res://Object/EP05Object/fountain.tscn" id="21_51f8s"]
 [ext_resource type="Texture2D" uid="uid://bucjv74dxa1gx" path="res://Tileset/Public Suan/Benches/4.png" id="22_3ywk5"]
 [ext_resource type="PackedScene" uid="uid://bwaqxopoi3y2x" path="res://Scene/SCENS/main_character.tscn" id="23_p6acj"]
+[ext_resource type="PackedScene" uid="uid://bxqiedpra8v11" path="res://Object/EP06Object/kaiand_mira.tscn" id="24_bnml3"]
 [ext_resource type="Texture2D" uid="uid://dnyjlb7dxl2u4" path="res://Character/Townpeople/7/Idle.png" id="26_whp18"]
 [ext_resource type="Texture2D" uid="uid://bovak48onqsq1" path="res://Character/Townpeople/4/Idle.png" id="27_axqiv"]
 [ext_resource type="Texture2D" uid="uid://cgyq7beix3dpi" path="res://Character/Townpeople/11/Idle.png" id="28_axqiv"]
@@ -1028,6 +1029,10 @@ texture = ExtResource("20_qnhlb")
 [node name="Fountain" parent="." instance=ExtResource("21_51f8s")]
 position = Vector2(603, 421.00003)
 scale = Vector2(2.3, 2.3)
+
+[node name="KaiandMira" parent="Fountain" instance=ExtResource("24_bnml3")]
+position = Vector2(-158.26088, 16.956509)
+scale = Vector2(0.9, 0.9)
 
 [node name="4" type="Sprite2D" parent="."]
 position = Vector2(597, 515)

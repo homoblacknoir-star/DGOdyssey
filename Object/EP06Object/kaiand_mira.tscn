@@ -1,0 +1,131 @@
+[gd_scene load_steps=17 format=3 uid="uid://bxqiedpra8v11"]
+
+[ext_resource type="Texture2D" uid="uid://dcfebfrlwonku" path="res://Character/Kai/Biker_idle.png" id="1_o6mai"]
+[ext_resource type="Script" uid="uid://dq1rhlcel0x8b" path="res://Object/EP06Object/kaiand_mira.gd" id="1_r5go7"]
+[ext_resource type="Texture2D" uid="uid://bavw5q3yjutdq" path="res://Character/Mira/Idle.png" id="2_r5go7"]
+[ext_resource type="FontFile" uid="uid://87bcc41v7qqg" path="res://Font/CyberpunkCraftpixPixel.otf" id="3_vyxwx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqtmr"]
+atlas = ExtResource("1_o6mai")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx4v2"]
+atlas = ExtResource("1_o6mai")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qxed"]
+atlas = ExtResource("1_o6mai")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6amh0"]
+atlas = ExtResource("1_o6mai")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ug0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqtmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cx4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qxed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6amh0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2yg8"]
+atlas = ExtResource("2_r5go7")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deqyi"]
+atlas = ExtResource("2_r5go7")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqjjm"]
+atlas = ExtResource("2_r5go7")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xin10"]
+atlas = ExtResource("2_r5go7")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_da4nn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2yg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_deqyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqjjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xin10")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0enkc"]
+size = Vector2(81, 85)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucarp"]
+bg_color = Color(0.060530342, 0.060530365, 0.060530297, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+anti_aliasing_size = 10.0
+
+[node name="KaiandMira" type="Area2D"]
+script = ExtResource("1_r5go7")
+
+[node name="Kai" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8.999999, -2.9999998)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_5ug0f")
+autoplay = "default"
+frame_progress = 0.12361003
+
+[node name="Mira" type="AnimatedSprite2D" parent="."]
+position = Vector2(24.999998, -3)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_da4nn")
+autoplay = "default"
+frame_progress = 0.856685
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_0enkc")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -39.0
+offset_top = -37.0
+offset_right = 52.0
+offset_bottom = -22.0
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_vyxwx")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_ucarp")
+text = "[ E ] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
