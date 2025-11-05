@@ -66,6 +66,7 @@ directories/dtl_directory={
 "Nephew": "res://Dialog/Timeline/EP06/Nephew.dtl",
 "Teacher": "res://Dialog/Timeline/EP01/Teacher.dtl",
 "TeacherLocked": "res://Dialog/Timeline/EP01/TeacherLocked.dtl",
+"Thieffeelsorry": "res://Dialog/Timeline/EP08/Thieffeelsorry.dtl",
 "friends": "res://Dialog/Timeline/EP02/friends.dtl",
 "timeline": "res://Dialog/Timeline/Alexhome/timeline.dtl"
 }
@@ -129,6 +130,10 @@ folder_colors={
 "res://Tileset/Tileset_Sheet/": "red",
 "res://UI/": "blue"
 }
+
+[global_group]
+
+Player=""
 
 [input]
 
