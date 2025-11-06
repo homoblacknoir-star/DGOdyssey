@@ -20,6 +20,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 InteractionManager="*res://Object/InteractionManager.tscn"
 SceneTransition="*res://Scene/scene_transition.tscn"
 Global="*res://global.gd"
+MusicManager="*res://autoloads/MusicManager.tscn"
 
 [dialogic]
 

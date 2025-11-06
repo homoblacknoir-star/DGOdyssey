@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=4 uid="uid://dhynnrdyqc4po"]
+[gd_scene load_steps=139 format=4 uid="uid://dhynnrdyqc4po"]
 
 [ext_resource type="Texture2D" uid="uid://dvob0kedhewv5" path="res://Background/City_in_different_time/abouttodark/7.png" id="1_rvetj"]
 [ext_resource type="Texture2D" uid="uid://db66uundnmdvu" path="res://Tileset/Tileset_Sheet/Buildings.png" id="2_7crhm"]
@@ -11,9 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cqr5ojrjiwf33" path="res://Object/EP03Object/cs_door_ep_03.tscn" id="8_xcahl"]
 [ext_resource type="PackedScene" uid="uid://bnbsvy3p6rg5b" path="res://Background/pc.tscn" id="9_xcahl"]
 [ext_resource type="PackedScene" uid="uid://bwaqxopoi3y2x" path="res://Scene/SCENS/main_character.tscn" id="11_rvetj"]
-[ext_resource type="PackedScene" uid="uid://dgryibbch3icf" path="res://Object/EP03Object/teacher_ep_03.tscn" id="12_amga3"]
+[ext_resource type="PackedScene" uid="uid://c40gd6rcyyb45" path="res://Object/EP03Object/teacher_ep_03.tscn" id="12_amga3"]
 [ext_resource type="Texture2D" uid="uid://btvfg4w4ru57u" path="res://Character/Mira/Mira-Normal.png" id="12_el580"]
 [ext_resource type="Texture2D" uid="uid://2d1fe16gpe5j" path="res://Character/Kai/kai-idle.png" id="13_q1lye"]
+[ext_resource type="Script" uid="uid://cdxcdlfkqge5l" path="res://Scene/SCENS/main_character.gd" id="15_el580"]
 [ext_resource type="Texture2D" uid="uid://dgdow5prf1mlx" path="res://Character/Henry/Henry-Idle.png" id="15_hc1vl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4yh4"]
@@ -3182,6 +3183,8 @@ frame_progress = 0.48271322
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_rvetj")]
 position = Vector2(204, 443)
+script = ExtResource("15_el580")
+move_speed = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-2.2222223, -103.333374)
